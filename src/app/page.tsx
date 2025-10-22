@@ -62,7 +62,7 @@ export default function Home() {
                   Vende <span className="font-bold">Sin Comisiones</span> para el Comprador
                 </h1>
                 <p className="text-lg md:text-xl mb-8 text-slate-400 font-light leading-relaxed">
-                  Vende tu piso <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">sin que el comprador pague comisión</span>. Más atractivo para compradores = Venta más rápida al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador.
+                  Vende tu casa <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">sin que el comprador pague comisión</span> en toda España. Más atractivo para compradores = Venta más rápida al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
