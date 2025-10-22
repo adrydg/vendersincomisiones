@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
           // Metadata
           origen: 'InmobiliariasCentro de Madrid',
-          url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inmobiliariascentromadrid.es',
+          url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vendersincomisiones.es',
           timestamp: new Date().toISOString(),
           timestampLocal: new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' }),
         };
@@ -93,7 +93,7 @@ export async function POST(request: Request) {
 
       <hr />
       <p style="color: #666; font-size: 12px;">
-        Lead recibido desde: ${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inmobiliariascentromadrid.es'}<br />
+        Lead recibido desde: ${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vendersincomisiones.es'}<br />
         Fecha: ${new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })}
       </p>
     `;
@@ -154,7 +154,7 @@ export async function POST(request: Request) {
                 </p>
 
                 <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0 0 25px 0;">
-                  Gracias por haber solicitado información en <strong style="color: #0f172a;">www.inmobiliariascentromadrid.es</strong> ${confirmationMessage}.
+                  Gracias por haber solicitado información en <strong style="color: #0f172a;">www.vendersincomisiones.es</strong> ${confirmationMessage}.
                 </p>
 
                 <!-- Benefits Box -->
@@ -202,7 +202,7 @@ export async function POST(request: Request) {
               <!-- Footer -->
               <div style="background-color: #f9fafb; padding: 25px 30px; text-align: center; border-top: 1px solid #e5e7eb;">
                 <p style="color: #6b7280; font-size: 14px; margin: 0 0 10px 0;">
-                  Este email ha sido enviado desde <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inmobiliariascentromadrid.es'}" style="color: #2563eb; text-decoration: none;">www.inmobiliariascentromadrid.es</a>
+                  Este email ha sido enviado desde <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vendersincomisiones.es'}" style="color: #2563eb; text-decoration: none;">www.vendersincomisiones.es</a>
                 </p>
                 <p style="color: #9ca3af; font-size: 12px; margin: 0;">
                   © ${new Date().getFullYear()} Inmobiliarias Centro de Madrid. Todos los derechos reservados.

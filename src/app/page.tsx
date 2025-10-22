@@ -11,24 +11,24 @@ export default function Home() {
 
   const faqs = [
     {
-      question: '¿Cómo funciona el comparador de inmobiliarias en Centro de Madrid?',
-      answer: 'Nuestro comparador te permite ver y comparar las principales agencias inmobiliarias de Centro de Madrid según sus servicios, comisiones, valoraciones de clientes y zonas de cobertura en la ciudad. Puedes solicitar ofertas personalizadas de múltiples inmobiliarias locales y elegir la que mejor se adapte a tus necesidades.',
+      question: '¿Qué significa vender sin comisiones para el comprador?',
+      answer: 'Significa que el comprador de tu vivienda NO tendrá que pagar ninguna comisión a la inmobiliaria. Solo tú como vendedor pagas la comisión. Esto hace tu piso mucho más atractivo para compradores y acelera la venta, ya que eliminas uno de los principales frenos (el coste adicional de la comisión del comprador).',
     },
     {
-      question: '¿Es gratuito usar el comparador de inmobiliarias?',
-      answer: 'Sí, nuestro servicio es 100% gratuito para los usuarios. Las agencias inmobiliarias de Centro de Madrid pagan por aparecer en nuestra plataforma, pero tú no pagas nada por comparar y solicitar ofertas. Sin letra pequeña ni comisiones ocultas.',
+      question: '¿Por qué vender más rápido si el comprador no paga comisión?',
+      answer: 'Porque eliminas la mayor barrera de compra. Cuando un comprador no tiene que pagar comisión adicional (que suele ser 2-3% del precio), puede pagar más por tu piso o decidirse más rápido. Tu vivienda se vuelve más competitiva frente a otras propiedades donde sí hay comisión para el comprador.',
     },
     {
-      question: '¿Cuánto tiempo tarda en recibir ofertas de inmobiliarias en Centro de Madrid?',
-      answer: 'Normalmente recibirás las primeras ofertas de inmobiliarias de Centro de Madrid en un plazo de 24 horas laborables. Las agencias locales contactarán contigo por email o teléfono según tus preferencias para ofrecerte las mejores condiciones.',
+      question: '¿Es gratuito el servicio de comparación?',
+      answer: 'Sí, nuestro servicio de comparación es 100% gratuito para vendedores. Te conectamos con las mejores inmobiliarias de Madrid que trabajan con modelo sin comisión para el comprador. Recibes ofertas personalizadas sin compromiso y eliges la que más te conviene.',
     },
     {
-      question: '¿Qué inmobiliarias de Centro de Madrid están en el comparador?',
-      answer: 'Trabajamos con las mejores inmobiliarias de Centro de Madrid que operan en todas las zonas: Sol, Salamanca, Chamberí, Retiro, Chueca, Malasaña, La Latina y demás barrios. Solo incluimos agencias verificadas con buenas valoraciones de clientes reales.',
+      question: '¿En cuánto tiempo recibiré ofertas de inmobiliarias?',
+      answer: 'Recibirás las primeras ofertas de inmobiliarias en un plazo de 24 horas laborables. Las agencias te contactarán para ofrecerte sus condiciones de venta sin comisión para el comprador. Luego comparas y decides.',
     },
     {
-      question: '¿Puedo vender mi piso en Centro de Madrid sin comisiones altas?',
-      answer: 'Sí, al comparar varias inmobiliarias de Centro de Madrid podrás encontrar las que ofrecen las comisiones más competitivas. Algunas agencias ofrecen tarifas planas o descuentos especiales. Compara y ahorra hasta un 30% en comisiones.',
+      question: '¿Qué ventajas tiene este modelo frente al tradicional?',
+      answer: 'La principal ventaja es la velocidad de venta. Al eliminar la comisión del comprador, tu piso es más atractivo: el comprador puede ofrecer un precio mayor (al ahorrarse la comisión) y tú vendes antes. Además, amplificas el número de compradores potenciales que ven tu propiedad como una mejor oportunidad.',
     },
   ];
 
@@ -55,14 +55,14 @@ export default function Home() {
               <div>
                 <div className="mb-6 inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
                   <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">
-                    Servicio Premium Gratis de Comparación Inmobiliaria
+                    El Comprador No Paga Comisión - Venta Más Rápida
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
-                  Inmobiliarias en <span className="font-bold">Centro de Madrid</span>
+                  Vende <span className="font-bold">Sin Comisiones</span> para el Comprador
                 </h1>
                 <p className="text-lg md:text-xl mb-8 text-slate-400 font-light leading-relaxed">
-                  Recibe propuestas de las mejores agencias inmobiliarias <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">desde la comodidad de tu sofá</span>. Sin contactar directamente con las agencias, nosotros gestionamos todo.
+                  Vende tu piso <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">sin que el comprador pague comisión</span>. Más atractivo para compradores = Venta más rápida al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -91,33 +91,32 @@ export default function Home() {
               {/* Columna Derecha - Ventajas Exclusivas */}
               <div className="bg-amber-500/10 border-2 border-amber-500/30 rounded-lg p-8 backdrop-blur-sm">
                 <div className="text-center">
-                  <div className="text-5xl mb-4">🎁</div>
+                  <div className="text-5xl mb-4">🚀</div>
                   <h2 className="text-4xl md:text-5xl font-bold mb-2 leading-tight">
-                    <span className="text-amber-400">Consigue </span>
-                    <span className="text-white">Ventajas</span>
-                    <span className="text-amber-400"> Exclusivas</span>
+                    <span className="text-amber-400">Vende </span>
+                    <span className="text-white">Más Rápido</span>
                   </h2>
                   <p className="text-2xl md:text-3xl font-bold mb-6">
-                    <span className="text-amber-400">en las </span>
-                    <span className="text-white">agencias de tu barrio</span>
+                    <span className="text-white">Sin comisión </span>
+                    <span className="text-amber-400">para el comprador</span>
                   </p>
                   <div className="space-y-4 text-left">
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>Descuentos exclusivos</strong> en comisiones de hasta un 30%
+                        <strong>0% comisión comprador</strong> - Más atractivo para compradores
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>Propuestas mejoradas</strong> que no encontrarás yendo directo
+                        <strong>Venta más rápida</strong> - Elimina el principal freno del comprador
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>Servicios premium</strong> incluidos sin coste adicional
+                        <strong>Mejor precio final</strong> - Comprador paga más por no tener comisión
                       </p>
                     </div>
                   </div>

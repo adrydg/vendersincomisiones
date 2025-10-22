@@ -308,7 +308,7 @@ export default function LeadForm() {
             >
               términos y condiciones
             </button>
-            . Acepto que mis datos sean cedidos a empresas colaboradoras de www.inmobiliariascentromadrid.es para gestionar mi solicitud y ofrecerme servicios relacionados con mi interés legítimo. *
+            . Acepto que mis datos sean cedidos a empresas colaboradoras de www.vendersincomisiones.es para gestionar mi solicitud y ofrecerme servicios relacionados con mi interés legítimo. *
           </label>
         </div>
 
@@ -337,7 +337,7 @@ export default function LeadForm() {
               <p><strong>Última actualización:</strong> Enero 2025</p>
 
               <h3 className="text-lg font-bold mt-6">1. Responsable del Tratamiento</h3>
-              <p>www.inmobiliariascentromadrid.es es responsable del tratamiento de los datos personales que nos facilite a través de este formulario.</p>
+              <p>www.vendersincomisiones.es es responsable del tratamiento de los datos personales que nos facilite a través de este formulario.</p>
 
               <h3 className="text-lg font-bold mt-6">2. Finalidad del Tratamiento</h3>
               <p>Sus datos personales serán tratados con las siguientes finalidades:</p>
@@ -407,7 +407,7 @@ export default function LeadForm() {
               <p><strong>Última actualización:</strong> Enero 2025</p>
 
               <h3 className="text-lg font-bold mt-6">1. Objeto del Servicio</h3>
-              <p>www.inmobiliariascentromadrid.es es una plataforma de intermediación que conecta a personas interesadas en servicios inmobiliarios con agencias profesionales de la zona.</p>
+              <p>www.vendersincomisiones.es es una plataforma de intermediación que conecta a personas interesadas en servicios inmobiliarios con agencias profesionales de la zona.</p>
 
               <h3 className="text-lg font-bold mt-6">2. Funcionamiento del Servicio</h3>
               <ul className="list-disc pl-6">
@@ -449,7 +449,7 @@ export default function LeadForm() {
               </ul>
 
               <h3 className="text-lg font-bold mt-6">6. Limitación de Responsabilidad</h3>
-              <p>www.inmobiliariascentromadrid.es actúa como intermediario. No somos responsables de:</p>
+              <p>www.vendersincomisiones.es actúa como intermediario. No somos responsables de:</p>
               <ul className="list-disc pl-6">
                 <li>Las ofertas, precios o condiciones propuestas por las agencias</li>
                 <li>La calidad del servicio prestado por las agencias</li>

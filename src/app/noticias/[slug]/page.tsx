@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       'mercado inmobiliario madrid',
     ],
     alternates: {
-      canonical: `https://www.inmobiliariascentromadrid.es/noticias/${article.slug}`,
+      canonical: `https://www.vendersincomisiones.es/noticias/${article.slug}`,
     },
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: `https://www.inmobiliariascentromadrid.es/noticias/${article.slug}`,
+      url: `https://www.vendersincomisiones.es/noticias/${article.slug}`,
       type: 'article',
       publishedTime: article.publishedAt,
       authors: [article.author.name],

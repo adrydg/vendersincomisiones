@@ -1,93 +1,96 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'Vende tu Casa en Centro de Madrid con Descuentos Exclusivos hasta 30%',
-  description: '🏠 Vende tu casa en Centro de Madrid ahorrando hasta un 30% en comisiones. Recibe ofertas mejoradas de las mejores inmobiliarias sin salir de casa. ✅ Valoración gratuita ✅ Sin compromiso ✅ Descuentos exclusivos para vendedores.',
-  url: 'https://www.inmobiliariascentromadrid.es',
+  name: 'Vender Sin Comisiones - Vende tu piso sin que el comprador pague comisión',
+  description: '🏠 Vende tu piso sin que el comprador pague comisión. Venta más rápida y al mejor precio. Las mejores inmobiliarias de Madrid te ayudan a vender eliminando la comisión del comprador. ✅ Valoración gratuita ✅ Sin compromiso ✅ Vende más rápido',
+  url: 'https://www.vendersincomisiones.es',
   ogImage: '/og-image.jpg',
   keywords: [
-    // Keywords locales principales
-    'inmobiliarias centro madrid',
-    'agencias inmobiliarias centro madrid',
-    'comparador inmobiliarias madrid centro',
-    'ranking inmobiliarias centro madrid 2025',
+    // Keywords principales - Sin comisiones
+    'vender sin comisiones madrid',
+    'vender piso sin comisiones comprador',
+    'inmobiliaria sin comisión comprador madrid',
+    'vender casa sin comisiones madrid',
+    'venta sin comisiones inmobiliaria',
 
-    // Marcas específicas (SEO branded)
-    'gilmar madrid',
-    'engel volkers madrid',
-    'tecnocasa centro madrid',
-    'redpiso centro madrid',
+    // Concepto - Ahorro comprador
+    'comprar piso sin comisiones madrid',
+    'piso sin comisión compradorr madrid',
+    'compra sin comisiones madrid',
+    'venta sin gastos comprador',
+    'inmobiliaria 0% comisión comprador',
 
-    // Intención de búsqueda - Compra
-    'comprar piso centro madrid',
-    'comprar casa centro madrid',
-    'pisos en venta centro madrid',
-    'casas en venta centro madrid',
-    'viviendas centro madrid',
-    'pisos centro madrid',
+    // Localizaciones Madrid
+    'vender sin comisiones centro madrid',
+    'vender sin comisiones salamanca madrid',
+    'vender sin comisiones chamberi madrid',
+    'vender sin comisiones retiro madrid',
 
     // Intención de búsqueda - Venta
-    'vender piso centro madrid',
-    'vender casa centro madrid',
-    'vender vivienda centro madrid',
-    'vender piso rapido centro madrid',
-    'tasación vivienda centro madrid',
-    'valoración piso centro madrid',
-    'valoracion gratuita centro madrid',
+    'vender piso rapido madrid',
+    'vender casa rapido madrid',
+    'vender vivienda madrid',
+    'venta rapida piso madrid',
+    'como vender piso rapido',
+    'vender piso en semanas madrid',
 
-    // Intención de búsqueda - Alquiler
-    'alquilar piso centro madrid',
-    'pisos alquiler centro madrid',
-    'alquiler centro madrid',
+    // Servicios venta
+    'tasación vivienda gratuita madrid',
+    'valoración piso gratis madrid',
+    'valoracion gratuita madrid',
+    'tasar piso gratis madrid',
 
-    // Servicios específicos
-    'mejores inmobiliarias centro madrid',
-    'inmobiliarias baratas centro madrid',
-    'agente inmobiliario centro madrid',
-    'inmobiliaria sin comisiones centro madrid',
-    'inmobiliaria comision 0 centro madrid',
+    // Comparativas
+    'comparador inmobiliarias madrid',
+    'mejores inmobiliarias madrid',
+    'inmobiliarias baratas madrid',
+    'agencias inmobiliarias madrid sin comisiones',
 
-    // Long-tail keywords
-    'comparar agencias inmobiliarias centro madrid',
-    'opiniones inmobiliarias centro madrid',
-    'inmobiliarias madrid centro',
-    'inmobiliarias dentro m30 madrid',
+    // Beneficios vendedor
+    'vender piso mejor precio madrid',
+    'vender casa precio alto madrid',
+    'maximizar venta piso',
+    'vender vivienda sin rebajar',
 
-    // Keywords por barrios principales (SEO hiperlocal)
-    'inmobiliarias salamanca madrid',
-    'pisos chamberi madrid',
-    'inmobiliarias retiro madrid',
-    'pisos sol madrid',
-    'inmobiliarias chamartin madrid',
-    'pisos la latina madrid',
-    'inmobiliarias chueca madrid',
-    'pisos malasaña madrid',
-    'inmobiliarias gran via madrid',
-    'pisos opera madrid',
-    'inmobiliarias arganzuela madrid',
-    'pisos carabanchel madrid',
-    'inmobiliarias moncloa madrid',
-    'pisos tetuan madrid',
-    'inmobiliarias fuencarral madrid',
-    'pisos ciudad lineal madrid',
-    'inmobiliarias hortaleza madrid',
-    'pisos moratalaz madrid',
-    'inmobiliarias vallecas madrid',
-    'pisos villaverde madrid',
+    // Long-tail - Problema/Solución
+    'mi piso no se vende que hago',
+    'como atraer compradores piso',
+    'vender piso mercado estancado',
+    'piso lleva meses venta',
+    'porque no se vende mi piso',
 
-    // Servicios
-    'tasación gratuita madrid',
-    'valoración gratis madrid',
-    'asesor inmobiliario madrid',
+    // Marcas inmobiliarias
+    'gilmar madrid sin comisiones',
+    'engel volkers sin comision comprador',
+    'tecnocasa madrid',
+    'redpiso madrid',
+
+    // Keywords por barrios principales
+    'vender piso salamanca',
+    'vender piso chamberi',
+    'vender piso retiro',
+    'vender piso chueca',
+    'vender piso malasaña',
+    'vender piso la latina',
+    'vender piso sol madrid',
+    'vender piso chamartin',
+    'vender piso moncloa',
+
+    // Tipos de propiedad
+    'vender ático madrid',
+    'vender estudio madrid',
+    'vender piso reformado madrid',
+    'vender piso obra nueva madrid',
+
+    // Servicios complementarios
     'home staging madrid',
+    'fotografía inmobiliaria madrid',
+    'asesor inmobiliario madrid',
 
-    // Intención comercial
-    'primera vivienda madrid',
-    'pisos obra nueva madrid',
-    'chalets madrid',
-    'locales comerciales madrid',
-    'aticos madrid centro',
-    'estudios madrid centro',
+    // Urgencia
+    'vender piso urgente madrid',
+    'venta rapida vivienda',
+    'necesito vender piso ya',
   ],
 };
 
@@ -95,13 +98,13 @@ export const baseMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
-    template: `%s | Inmobiliarias Centro Madrid`,
+    template: `%s | Vender Sin Comisiones`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
-  authors: [{ name: 'Inmobiliarias Centro Madrid' }],
-  creator: 'Inmobiliarias Centro Madrid',
-  publisher: 'Inmobiliarias Centro Madrid',
+  authors: [{ name: 'Vender Sin Comisiones' }],
+  creator: 'Vender Sin Comisiones',
+  publisher: 'Vender Sin Comisiones',
   formatDetection: {
     telephone: true,
     email: true,
@@ -114,24 +117,24 @@ export const baseMetadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     url: siteConfig.url,
-    title: 'Vende tu Casa en Centro de Madrid con Descuentos hasta 30% | Ofertas Exclusivas',
-    description: '🏠 Vende tu casa ahorrando hasta un 30% en comisiones. Recibe ofertas mejoradas de las mejores inmobiliarias sin salir de casa. Valoración gratuita y descuentos exclusivos para vendedores.',
-    siteName: 'Inmobiliarias Centro Madrid',
+    title: 'Vender Sin Comisiones - El comprador no paga comisión | Vende más rápido',
+    description: '🏠 Vende tu piso sin que el comprador pague comisión. Venta más rápida y al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador para que vendas antes.',
+    siteName: 'Vender Sin Comisiones',
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Vende tu Casa en Centro de Madrid con Descuentos Exclusivos hasta 30%',
+        alt: 'Vender Sin Comisiones - Vende tu piso sin que el comprador pague comisión',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vende tu Casa en Centro de Madrid con Descuento hasta 30%',
-    description: '🏠 Ahorra hasta 30% en comisiones. Ofertas mejoradas de las mejores inmobiliarias. Valoración gratuita desde tu sofá. ✅ Sin compromiso',
+    title: 'Vender Sin Comisiones - El comprador no paga | Venta más rápida',
+    description: '🏠 Elimina la comisión del comprador y vende más rápido. Valoración gratuita. ✅ Sin compromiso ✅ Venta al mejor precio',
     images: [siteConfig.ogImage],
-    creator: '@inmocentromadrid',
+    creator: '@vendersincomision',
   },
   robots: {
     index: true,

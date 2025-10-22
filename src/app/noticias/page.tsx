@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     'tendencias inmobiliarias madrid 2025',
   ],
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/noticias',
+    canonical: 'https://www.vendersincomisiones.es/noticias',
   },
   openGraph: {
     title: 'Noticias Inmobiliarias Centro Madrid | Guías y Consejos',
     description: 'Las últimas noticias y guías del mercado inmobiliario en el centro de Madrid.',
-    url: 'https://www.inmobiliariascentromadrid.es/noticias',
+    url: 'https://www.vendersincomisiones.es/noticias',
     type: 'website',
   },
 };

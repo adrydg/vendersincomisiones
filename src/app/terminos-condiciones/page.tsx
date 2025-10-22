@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Términos y Condiciones | Inmobiliarias Centro Madrid',
   description: 'Términos y condiciones de uso de los servicios de Inmobiliarias Centro Madrid. Derechos y obligaciones de usuarios y agencias inmobiliarias.',
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/terminos-condiciones',
+    canonical: 'https://www.vendersincomisiones.es/terminos-condiciones',
   },
   robots: {
     index: false,
@@ -33,7 +33,7 @@ export default function TerminosCondicionesPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Aceptación de los términos</h2>
                 <p className="mb-4">
-                  Estos Términos y Condiciones regulan el uso del sitio web <Link href="/" className="text-blue-600 hover:underline">www.inmobiliariascentromadrid.es</Link> (en adelante, &quot;el Sitio Web&quot;) y los servicios ofrecidos a través del mismo por Inmobiliarias Centro Madrid (en adelante, &quot;ICM&quot; o &quot;nosotros&quot;).
+                  Estos Términos y Condiciones regulan el uso del sitio web <Link href="/" className="text-blue-600 hover:underline">www.vendersincomisiones.es</Link> (en adelante, &quot;el Sitio Web&quot;) y los servicios ofrecidos a través del mismo por Inmobiliarias Centro Madrid (en adelante, &quot;ICM&quot; o &quot;nosotros&quot;).
                 </p>
                 <p className="mb-4">
                   Al acceder y utilizar este Sitio Web, usted (en adelante, &quot;el Usuario&quot;) acepta quedar vinculado por estos Términos y Condiciones. Si no está de acuerdo con alguno de estos términos, no debe utilizar el Sitio Web.
@@ -288,8 +288,8 @@ export default function TerminosCondicionesPage() {
                 <p className="mb-4">
                   Para cualquier pregunta, aclaración o sugerencia sobre estos Términos y Condiciones, puede contactarnos:
                 </p>
-                <p className="mb-2"><strong>Email:</strong> contacto@inmobiliariascentromadrid.es</p>
-                <p className="mb-2"><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.inmobiliariascentromadrid.es/contacto</Link></p>
+                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
+                <p className="mb-2"><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.vendersincomisiones.es/contacto</Link></p>
               </section>
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

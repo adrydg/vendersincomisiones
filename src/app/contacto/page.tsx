@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'vender piso centro madrid sin comisión',
   ],
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/contacto',
+    canonical: 'https://www.vendersincomisiones.es/contacto',
   },
   openGraph: {
     title: 'Solicita Ofertas Gratis | Inmobiliarias Centro de Madrid',
     description: 'Recibe hasta 3 ofertas de inmobiliarias en Centro de Madrid sin compromiso.',
-    url: 'https://www.inmobiliariascentromadrid.es/contacto',
+    url: 'https://www.vendersincomisiones.es/contacto',
     type: 'website',
   },
 };

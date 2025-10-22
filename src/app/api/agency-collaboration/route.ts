@@ -86,7 +86,7 @@ export async function POST(request: Request) {
 
         <div style="background-color: #f3f4f6; padding: 20px; text-align: center; border-top: 1px solid #e5e7eb;">
           <p style="color: #6b7280; font-size: 12px; margin: 0;">
-            Solicitud recibida desde: <strong>www.inmobiliariascentromadrid.es/colaborar</strong><br />
+            Solicitud recibida desde: <strong>www.vendersincomisiones.es/colaborar</strong><br />
             Fecha: ${new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })}
           </p>
         </div>
@@ -182,7 +182,7 @@ export async function POST(request: Request) {
               <!-- Footer -->
               <div style="background-color: #f9fafb; padding: 25px 30px; text-align: center; border-top: 1px solid #e5e7eb;">
                 <p style="color: #6b7280; font-size: 14px; margin: 0 0 10px 0;">
-                  Este email ha sido enviado desde <a href="https://www.inmobiliariascentromadrid.es" style="color: #059669; text-decoration: none;">www.inmobiliariascentromadrid.es</a>
+                  Este email ha sido enviado desde <a href="https://www.vendersincomisiones.es" style="color: #059669; text-decoration: none;">www.vendersincomisiones.es</a>
                 </p>
                 <p style="color: #9ca3af; font-size: 12px; margin: 0;">
                   © ${new Date().getFullYear()} Inmobiliarias Centro de Madrid. Todos los derechos reservados.

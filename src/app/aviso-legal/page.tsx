@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Aviso Legal | Inmobiliarias Centro Madrid',
   description: 'Aviso legal del sitio web Inmobiliarias Centro Madrid. Información sobre propiedad intelectual, condiciones de uso y responsabilidades.',
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/aviso-legal',
+    canonical: 'https://www.vendersincomisiones.es/aviso-legal',
   },
   robots: {
     index: false,
@@ -38,15 +38,15 @@ export default function AvisoLegalPage() {
                 <ul className="list-none mb-4 space-y-2">
                   <li><strong>Titular:</strong> Inmobiliarias Centro Madrid</li>
                   <li><strong>Domicilio:</strong> Madrid, España</li>
-                  <li><strong>Correo electrónico:</strong> contacto@inmobiliariascentromadrid.es</li>
-                  <li><strong>Sitio Web:</strong> <Link href="/" className="text-blue-600 hover:underline">www.inmobiliariascentromadrid.es</Link></li>
+                  <li><strong>Correo electrónico:</strong> contacto@vendersincomisiones.es</li>
+                  <li><strong>Sitio Web:</strong> <Link href="/" className="text-blue-600 hover:underline">www.vendersincomisiones.es</Link></li>
                 </ul>
               </section>
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Objeto</h2>
                 <p className="mb-4">
-                  El titular del sitio web pone a disposición de los usuarios el presente documento, que regula el uso del sitio web <Link href="/" className="text-blue-600 hover:underline">www.inmobiliariascentromadrid.es</Link>, con el fin de dar cumplimiento a las obligaciones que dispone la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso del sitio web.
+                  El titular del sitio web pone a disposición de los usuarios el presente documento, que regula el uso del sitio web <Link href="/" className="text-blue-600 hover:underline">www.vendersincomisiones.es</Link>, con el fin de dar cumplimiento a las obligaciones que dispone la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso del sitio web.
                 </p>
                 <p>
                   Cualquier persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación.
@@ -166,8 +166,8 @@ export default function AvisoLegalPage() {
                 <p className="mb-4">
                   Para cualquier consulta o comunicación relacionada con este Aviso Legal, puede contactarnos a través de:
                 </p>
-                <p className="mb-2"><strong>Email:</strong> contacto@inmobiliariascentromadrid.es</p>
-                <p><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.inmobiliariascentromadrid.es/contacto</Link></p>
+                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
+                <p><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.vendersincomisiones.es/contacto</Link></p>
               </section>
 
               <div className="mt-12 pt-8 border-t border-gray-200">

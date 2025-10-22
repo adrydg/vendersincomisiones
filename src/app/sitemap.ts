@@ -4,7 +4,7 @@ import { neighborhoods } from '@/data/neighborhoods';
 import { articles } from '@/data/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.inmobiliariascentromadrid.es';
+  const baseUrl = 'https://www.vendersincomisiones.es';
 
   // Páginas estáticas principales
   const staticPages = [

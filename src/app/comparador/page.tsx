@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     'inmobiliarias salamanca madrid',
   ],
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/comparador',
+    canonical: 'https://www.vendersincomisiones.es/comparador',
   },
   openGraph: {
     title: 'Comparador de Inmobiliarias en Centro de Madrid',
     description: 'Compara agencias inmobiliarias en Centro de Madrid: servicios, comisiones, opiniones y más.',
-    url: 'https://www.inmobiliariascentromadrid.es/comparador',
+    url: 'https://www.vendersincomisiones.es/comparador',
     type: 'website',
   },
 };

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Política de Cookies | Inmobiliarias Centro Madrid',
   description: 'Información sobre el uso de cookies en el sitio web de Inmobiliarias Centro Madrid. Tipos de cookies, finalidad y gestión de preferencias.',
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/politica-cookies',
+    canonical: 'https://www.vendersincomisiones.es/politica-cookies',
   },
   robots: {
     index: false,
@@ -228,7 +228,7 @@ export default function PoliticaCookiesPage() {
                 <p className="mb-4">
                   Para cualquier duda sobre el uso de cookies en este sitio web, puede contactarnos en:
                 </p>
-                <p className="mb-2"><strong>Email:</strong> contacto@inmobiliariascentromadrid.es</p>
+                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
                 <p>
                   También puede consultar nuestra <Link href="/politica-privacidad" className="text-blue-600 hover:underline">Política de Privacidad</Link> para obtener más información sobre cómo tratamos sus datos personales.
                 </p>

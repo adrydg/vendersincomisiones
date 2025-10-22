@@ -343,7 +343,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               <button onClick={() => setShowPrivacyModal(false)} className="text-2xl">&times;</button>
             </div>
             <div className="text-sm text-gray-700 space-y-3">
-              <p>Tus datos serán tratados por www.inmobiliariascentromadrid.es para gestionar tu solicitud y serán cedidos a un máximo de 3 agencias inmobiliarias colaboradoras.</p>
+              <p>Tus datos serán tratados por www.vendersincomisiones.es para gestionar tu solicitud y serán cedidos a un máximo de 3 agencias inmobiliarias colaboradoras.</p>
               <p><strong>Derechos:</strong> Acceso, rectificación, supresión, oposición, limitación y portabilidad.</p>
               <p>Para más información consulta nuestra política completa de privacidad.</p>
             </div>

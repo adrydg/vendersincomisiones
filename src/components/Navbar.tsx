@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-light text-slate-900">
-              Inmobiliarias <span className="font-bold">Centro de Madrid</span>
+              Vender <span className="font-bold">Sin Comisiones</span>
             </Link>
           </div>
 

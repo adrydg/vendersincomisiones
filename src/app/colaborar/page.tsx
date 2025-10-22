@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Colabora con Nosotros - Inmobiliarias Centro de Madrid',
   description: 'Únete a nuestra red de agencias colaboradoras y recibe leads cualificados de clientes interesados en vender o comprar en Centro de Madrid.',
   alternates: {
-    canonical: 'https://www.inmobiliariascentromadrid.es/colaborar',
+    canonical: 'https://www.vendersincomisiones.es/colaborar',
   },
 };
 

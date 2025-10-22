@@ -8,12 +8,12 @@ export default function Footer() {
           {/* Columna 1: Sobre nosotros */}
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">
-              Inmobiliarias Centro de Madrid
+              Vender Sin Comisiones
             </h3>
             <p className="text-sm text-gray-400">
-              Comparador de inmobiliarias en Centro de Madrid. Encuentra las mejores
-              agencias para comprar, vender o alquilar tu vivienda con las mejores
-              condiciones del mercado.
+              Vende tu piso sin que el comprador pague comisión. Las mejores
+              inmobiliarias de Madrid eliminan la comisión del comprador para que
+              vendas más rápido y al mejor precio.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Inmobiliarias Centro de Madrid. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Vender Sin Comisiones. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
