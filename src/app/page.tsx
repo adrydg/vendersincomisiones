@@ -59,10 +59,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
-                  Vende Tu Casa <span className="font-bold">Sin Pagar Comisión</span>
+                  <span className="font-bold">Vender Casa Sin Pagar Comisión al Vendedor es Posible</span>
                 </h1>
                 <p className="text-lg md:text-xl mb-8 text-slate-400 font-light leading-relaxed">
-                  Comparamos las mejores inmobiliarias de España que <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">NO te cobran comisión como vendedor</span>. Ahorra miles de euros en gastos de venta y elige la mejor agencia para tu propiedad.
+                  Comparamos las mejores inmobiliarias de España que <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">NO te cobran comisión como vendedor</span>. Ahorra entre 9.000€ y 15.000€ en gastos de venta. Compara ofertas y elige la mejor agencia sin desembolso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -93,11 +93,11 @@ export default function Home() {
                 <div className="text-center">
                   <div className="text-5xl mb-4">💰</div>
                   <h2 className="text-4xl md:text-5xl font-bold mb-2 leading-tight">
-                    <span className="text-amber-400">Ahorra </span>
-                    <span className="text-white">Miles de €</span>
+                    <span className="text-amber-400">Ahorra hasta </span>
+                    <span className="text-white">15.000€</span>
                   </h2>
                   <p className="text-2xl md:text-3xl font-bold mb-6">
-                    <span className="text-white">Sin comisión </span>
+                    <span className="text-white">0% comisión </span>
                     <span className="text-amber-400">para el vendedor</span>
                   </p>
                   <div className="space-y-4 text-left">

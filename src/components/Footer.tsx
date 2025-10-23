@@ -1,13 +1,20 @@
 import Link from 'next/link';
-import { getMadridMetropolitanCities } from '@/data/cities';
+import { getMadridMetropolitanCities, type City } from '@/data/cities';
+import { getAllRegions } from '@/data/regions';
 
 export default function Footer() {
   const madridCities = getMadridMetropolitanCities();
+  const regions = getAllRegions();
 
-  // Dividir ciudades en grupos para mejor visualización
+  // Dividir ciudades de Madrid en grupos para mejor visualización
   const citiesGroup1 = madridCities.slice(0, 7);
   const citiesGroup2 = madridCities.slice(7, 14);
   const citiesGroup3 = madridCities.slice(14);
+
+  // Helper para construir URL de ciudad
+  const buildCityURL = (city: City) => {
+    return `/${city.regionSlug}/${city.provinceSlug}/${city.slug}/vender-sin-comision-vendedor`;
+  };
 
   return (
     <footer className="bg-gray-900 text-gray-300 mt-20">
@@ -41,8 +48,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/barrios" className="text-sm hover:text-white transition-colors">
-                  Barrios
+                <Link href="/ciudades" className="text-sm hover:text-white transition-colors">
+                  Ciudades
                 </Link>
               </li>
               <li>
@@ -62,10 +69,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-sm font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2">
-              <li className="text-sm">Vender sin comisiones</li>
-              <li className="text-sm">Valoración gratuita</li>
-              <li className="text-sm">Venta rápida</li>
-              <li className="text-sm">Ahorro comprador</li>
+              <li className="text-sm">Vender sin comisiones vendedor</li>
+              <li className="text-sm">Comparador de agencias</li>
+              <li className="text-sm">Ahorro garantizado</li>
+              <li className="text-sm">Múltiples ofertas</li>
             </ul>
           </div>
 
@@ -100,13 +107,13 @@ export default function Footer() {
         {/* Sección de ciudades de la Comunidad de Madrid */}
         <div className="border-t border-gray-800 pt-8 mb-8">
           <h4 className="text-white text-base font-semibold mb-6 text-center">
-            Vender Casa Sin Comisiones en la Comunidad de Madrid
+            Vender Casa Sin Comisiones Vendedor en la Comunidad de Madrid
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-x-4 gap-y-2">
             {citiesGroup1.map((city) => (
               <Link
                 key={city.slug}
-                href={`/${city.slug}/vender-casa-sin-comisiones-vendedor`}
+                href={buildCityURL(city)}
                 className="text-sm text-gray-400 hover:text-amber-400 transition-colors"
               >
                 {city.name}
@@ -117,18 +124,18 @@ export default function Footer() {
             {citiesGroup2.map((city) => (
               <Link
                 key={city.slug}
-                href={`/${city.slug}/vender-casa-sin-comisiones-vendedor`}
+                href={buildCityURL(city)}
                 className="text-sm text-gray-400 hover:text-amber-400 transition-colors"
               >
                 {city.name}
               </Link>
             ))}
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-2 mt-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-x-4 gap-y-2 mt-2">
             {citiesGroup3.map((city) => (
               <Link
                 key={city.slug}
-                href={`/${city.slug}/vender-casa-sin-comisiones-vendedor`}
+                href={buildCityURL(city)}
                 className="text-sm text-gray-400 hover:text-amber-400 transition-colors"
               >
                 {city.name}
@@ -137,48 +144,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Principales ciudades de España */}
+        {/* Comunidades Autónomas de España */}
         <div className="border-t border-gray-800 pt-8 mb-8">
           <h4 className="text-white text-base font-semibold mb-6 text-center">
-            Vender Sin Comisiones en España
+            Vender Sin Comisiones en Todas las Comunidades Autónomas
           </h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-2 text-center">
-            <Link href="/barcelona/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Barcelona
-            </Link>
-            <Link href="/valencia/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Valencia
-            </Link>
-            <Link href="/sevilla/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Sevilla
-            </Link>
-            <Link href="/malaga/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Málaga
-            </Link>
-            <Link href="/zaragoza/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Zaragoza
-            </Link>
-            <Link href="/bilbao/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Bilbao
-            </Link>
-            <Link href="/alicante/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Alicante
-            </Link>
-            <Link href="/cordoba/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Córdoba
-            </Link>
-            <Link href="/valladolid/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Valladolid
-            </Link>
-            <Link href="/granada/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Granada
-            </Link>
-            <Link href="/murcia/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Murcia
-            </Link>
-            <Link href="/palma-de-mallorca/vender-casa-sin-comisiones-vendedor" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-              Palma
-            </Link>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-2 text-center">
+            {regions.map((region) => (
+              <Link
+                key={region.slug}
+                href={`/${region.slug}`}
+                className="text-sm text-gray-400 hover:text-amber-400 transition-colors"
+              >
+                {region.name}
+              </Link>
+            ))}
           </div>
         </div>
 
