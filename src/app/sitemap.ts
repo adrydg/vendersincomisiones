@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next';
 import { agencies } from '@/data/agencies';
-import { neighborhoods } from '@/data/neighborhoods';
 import { articles } from '@/data/articles';
+import { getAllRegions } from '@/data/regions';
+import { getAllProvinces } from '@/data/provinces';
+import { getAllCities } from '@/data/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.vendersincomisiones.es';
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/barrios`,
+      url: `${baseUrl}/ciudades`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -38,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/colaborar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
   ];
 
   // Páginas dinámicas de agencias
@@ -48,12 +56,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Páginas dinámicas de barrios (URLs limpias sin /barrios/)
-  const neighborhoodPages = neighborhoods.map((neighborhood) => ({
-    url: `${baseUrl}/${neighborhood.slug}`,
+  // Páginas de regiones (comunidades autónomas)
+  const regions = getAllRegions();
+  const regionPages = regions.map((region) => ({
+    url: `${baseUrl}/${region.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.85,
+  }));
+
+  // Páginas de provincias
+  const provinces = getAllProvinces();
+  const provincePages = provinces.map((province) => ({
+    url: `${baseUrl}/${province.regionSlug}/${province.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  // Páginas de ciudades
+  const cities = getAllCities();
+  const cityPages = cities.map((city) => ({
+    url: `${baseUrl}/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
   }));
 
   // Páginas dinámicas de noticias/artículos
@@ -64,5 +91,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...agencyPages, ...neighborhoodPages, ...articlePages];
+  return [...staticPages, ...agencyPages, ...regionPages, ...provincePages, ...cityPages, ...articlePages];
 }
