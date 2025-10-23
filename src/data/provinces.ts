@@ -565,6 +565,30 @@ export const provincesData: Province[] = [
     description: 'La Rioja, tierra del vino. Vende sin gastos.',
     majorCities: ['logrono'],
   },
+
+  // Ceuta
+  {
+    id: 'ceuta',
+    name: 'Ceuta',
+    slug: 'ceuta',
+    region: 'Ceuta',
+    regionSlug: 'ceuta',
+    population: 84000,
+    description: 'Ceuta, ciudad autónoma. Comparamos agencias sin comisión vendedor.',
+    majorCities: ['ceuta'],
+  },
+
+  // Melilla
+  {
+    id: 'melilla',
+    name: 'Melilla',
+    slug: 'melilla',
+    region: 'Melilla',
+    regionSlug: 'melilla',
+    population: 86000,
+    description: 'Melilla, ciudad autónoma. Vende sin gastos.',
+    majorCities: ['melilla'],
+  },
 ];
 
 export function getProvinceBySlug(slug: string): Province | undefined {

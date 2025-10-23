@@ -143,6 +143,22 @@ export const regionsData: Region[] = [
     description:
       'La Rioja, comunidad uniprovincial del norte. Vende sin comisión con las mejores agencias.',
   },
+  {
+    id: 'ceuta',
+    name: 'Ceuta',
+    slug: 'ceuta',
+    provinces: ['ceuta'],
+    description:
+      'Ceuta, ciudad autónoma en el norte de África. Comparamos agencias sin comisión vendedor.',
+  },
+  {
+    id: 'melilla',
+    name: 'Melilla',
+    slug: 'melilla',
+    provinces: ['melilla'],
+    description:
+      'Melilla, ciudad autónoma en el norte de África. Vende sin gastos con las mejores inmobiliarias.',
+  },
 ];
 
 export function getRegionBySlug(slug: string): Region | undefined {

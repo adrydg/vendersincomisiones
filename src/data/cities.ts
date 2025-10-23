@@ -32,6 +32,11 @@ export const madridMetropolitanCities: City[] = [
   { name: 'Pinto', slug: 'pinto', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 52000, featured: true },
   { name: 'Arganda del Rey', slug: 'arganda-del-rey', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 56000, featured: true },
   { name: 'Alcobendas', slug: 'alcobendas', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 118000, featured: true },
+  { name: 'Villaviciosa de Odón', slug: 'villaviciosa-de-odon', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 27000, featured: true },
+  { name: 'San Fernando de Henares', slug: 'san-fernando-de-henares', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 42000, featured: true },
+  { name: 'Galapagar', slug: 'galapagar', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 35000, featured: true },
+  { name: 'Tres Cantos', slug: 'tres-cantos', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 47000, featured: true },
+  { name: 'Griñón', slug: 'grinon', province: 'Madrid', provinceSlug: 'madrid', region: 'Comunidad de Madrid', regionSlug: 'madrid', population: 11000, featured: true },
 ];
 
 // Ciudades principales de otras provincias de España
@@ -107,6 +112,7 @@ export const majorSpanishCities: City[] = [
 
   // Castilla-La Mancha
   { name: 'Toledo', slug: 'toledo', province: 'Toledo', provinceSlug: 'toledo', region: 'Castilla-La Mancha', regionSlug: 'castilla-la-mancha', population: 85000, featured: true },
+  { name: 'Illescas', slug: 'illescas', province: 'Toledo', provinceSlug: 'toledo', region: 'Castilla-La Mancha', regionSlug: 'castilla-la-mancha', population: 30000, featured: true },
   { name: 'Albacete', slug: 'albacete', province: 'Albacete', provinceSlug: 'albacete', region: 'Castilla-La Mancha', regionSlug: 'castilla-la-mancha', population: 174000, featured: true },
   { name: 'Guadalajara', slug: 'guadalajara', province: 'Guadalajara', provinceSlug: 'guadalajara', region: 'Castilla-La Mancha', regionSlug: 'castilla-la-mancha', population: 87000, featured: true },
   { name: 'Ciudad Real', slug: 'ciudad-real', province: 'Ciudad Real', provinceSlug: 'ciudad-real', region: 'Castilla-La Mancha', regionSlug: 'castilla-la-mancha', population: 75000, featured: true },
@@ -122,6 +128,12 @@ export const majorSpanishCities: City[] = [
   // Canarias
   { name: 'Las Palmas de Gran Canaria', slug: 'las-palmas-de-gran-canaria', province: 'Las Palmas', provinceSlug: 'las-palmas', region: 'Canarias', regionSlug: 'canarias', population: 379000, featured: true },
   { name: 'Santa Cruz de Tenerife', slug: 'santa-cruz-de-tenerife', province: 'Santa Cruz de Tenerife', provinceSlug: 'santa-cruz-de-tenerife', region: 'Canarias', regionSlug: 'canarias', population: 208000, featured: true },
+
+  // Ceuta
+  { name: 'Ceuta', slug: 'ceuta', province: 'Ceuta', provinceSlug: 'ceuta', region: 'Ceuta', regionSlug: 'ceuta', population: 84000, featured: true },
+
+  // Melilla
+  { name: 'Melilla', slug: 'melilla', province: 'Melilla', provinceSlug: 'melilla', region: 'Melilla', regionSlug: 'melilla', population: 86000, featured: true },
 ];
 
 // Todas las ciudades
@@ -131,6 +143,10 @@ export const allCities: City[] = [
 ];
 
 // Helper functions
+export function getAllCities(): City[] {
+  return allCities;
+}
+
 export function getCityBySlug(slug: string): City | undefined {
   return allCities.find(city => city.slug === slug);
 }
