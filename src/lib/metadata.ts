@@ -1,25 +1,26 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'Vender Sin Comisiones - Vende tu casa sin que el comprador pague comisión',
-  description: '🏠 Vende tu casa sin que el comprador pague comisión en toda España. Venta más rápida y al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador. ✅ Valoración gratuita ✅ Sin compromiso ✅ Vende más rápido',
+  name: 'Vender Sin Comisiones - Comparador de Inmobiliarias Sin Gastos para el Vendedor',
+  description: '💰 Comparamos las mejores inmobiliarias de España que NO te cobran comisión como vendedor. Ahorra entre 9.000€ y 15.000€ en gastos de venta. ✅ Servicio gratuito ✅ Sin compromiso ✅ Compara ofertas',
   url: 'https://www.vendersincomisiones.es',
   ogImage: '/og-image.jpg',
   keywords: [
-    // Keywords principales - Sin comisiones
+    // Keywords principales - Sin comisiones para el vendedor
     'vender sin comisiones',
     'vender casa sin comisiones vendedor',
-    'vender piso sin comisiones comprador',
-    'inmobiliaria sin comisión comprador',
-    'venta sin comisiones inmobiliaria',
-    'vender casa sin comisiones españa',
+    'vender piso sin pagar comisión',
+    'inmobiliaria sin comisión vendedor',
+    'vender sin gastos',
+    'vender casa sin gastos vendedor',
+    'inmobiliarias que no cobran al vendedor',
+    'vender piso 0 comisión vendedor',
 
-    // Concepto - Ahorro comprador
-    'comprar casa sin comisiones',
-    'piso sin comisión comprador',
-    'compra sin comisiones',
-    'venta sin gastos comprador',
-    'inmobiliaria 0% comisión comprador',
+    // Comparador
+    'comparador inmobiliarias',
+    'comparar inmobiliarias',
+    'mejores inmobiliarias sin comisión',
+    'agencias inmobiliarias sin gastos vendedor',
 
     // Comunidad de Madrid - Zona metropolitana
     'vender sin comisiones madrid',
@@ -146,22 +147,22 @@ export const baseMetadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     url: siteConfig.url,
-    title: 'Vender Sin Comisiones - El comprador no paga comisión | Vende más rápido',
-    description: '🏠 Vende tu casa sin que el comprador pague comisión en toda España. Venta más rápida y al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador.',
+    title: 'Vender Sin Comisiones - Comparador de Inmobiliarias Sin Gastos Vendedor',
+    description: '💰 Comparamos las mejores inmobiliarias que NO te cobran comisión. Ahorra miles de euros. Vende tu casa sin gastos para ti en toda España.',
     siteName: 'Vender Sin Comisiones',
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Vender Sin Comisiones - Vende tu casa sin que el comprador pague comisión',
+        alt: 'Vender Sin Comisiones - Comparador de inmobiliarias sin gastos para el vendedor',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vender Sin Comisiones - El comprador no paga | Venta más rápida',
-    description: '🏠 Elimina la comisión del comprador y vende más rápido en toda España. Valoración gratuita. ✅ Sin compromiso ✅ Venta al mejor precio',
+    title: 'Vender Sin Comisiones - Ahorra Miles € en Gastos de Venta',
+    description: '💰 Comparamos inmobiliarias que NO cobran al vendedor. Ahorra entre 9.000€ y 15.000€. ✅ Gratis ✅ Sin compromiso ✅ Compara ofertas',
     images: [siteConfig.ogImage],
     creator: '@vendersincomision',
   },

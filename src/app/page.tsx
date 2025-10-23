@@ -11,24 +11,24 @@ export default function Home() {
 
   const faqs = [
     {
-      question: '¿Qué significa vender sin comisiones para el comprador?',
-      answer: 'Significa que el comprador de tu vivienda NO tendrá que pagar ninguna comisión a la inmobiliaria. Solo tú como vendedor pagas la comisión. Esto hace tu piso mucho más atractivo para compradores y acelera la venta, ya que eliminas uno de los principales frenos (el coste adicional de la comisión del comprador).',
+      question: '¿Qué significa vender sin comisiones para el vendedor?',
+      answer: 'Significa que TÚ como vendedor NO pagas comisión a la inmobiliaria, o pagas una comisión muy reducida. Comparamos las mejores agencias inmobiliarias de España que ofrecen modelos sin gastos para el vendedor. Ahorras miles de euros que tradicionalmente tendrías que pagar (normalmente entre 3-5% del precio de venta).',
     },
     {
-      question: '¿Por qué vender más rápido si el comprador no paga comisión?',
-      answer: 'Porque eliminas la mayor barrera de compra. Cuando un comprador no tiene que pagar comisión adicional (que suele ser 2-3% del precio), puede pagar más por tu piso o decidirse más rápido. Tu vivienda se vuelve más competitiva frente a otras propiedades donde sí hay comisión para el comprador.',
+      question: '¿Cómo es posible vender sin pagar comisión?',
+      answer: 'Las inmobiliarias modernas han adaptado su modelo de negocio: cobran solo al comprador o tienen tarifas planas muy reducidas para el vendedor. A través de nuestra plataforma, comparamos estas agencias para que encuentres la mejor opción sin gastos o con comisiones mínimas para ti como vendedor.',
     },
     {
       question: '¿Es gratuito el servicio de comparación?',
-      answer: 'Sí, nuestro servicio de comparación es 100% gratuito para vendedores. Te conectamos con las mejores inmobiliarias de Madrid que trabajan con modelo sin comisión para el comprador. Recibes ofertas personalizadas sin compromiso y eliges la que más te conviene.',
+      answer: 'Sí, nuestro servicio de comparación es 100% gratuito. Te conectamos con las mejores inmobiliarias de España que ofrecen vender sin cobrar comisión al vendedor. Recibes ofertas personalizadas sin compromiso y eliges la que más te conviene. Sin letra pequeña, sin costes ocultos.',
     },
     {
       question: '¿En cuánto tiempo recibiré ofertas de inmobiliarias?',
-      answer: 'Recibirás las primeras ofertas de inmobiliarias en un plazo de 24 horas laborables. Las agencias te contactarán para ofrecerte sus condiciones de venta sin comisión para el comprador. Luego comparas y decides.',
+      answer: 'Recibirás las primeras ofertas de inmobiliarias en un plazo de 24 horas laborables. Las agencias te contactarán para ofrecerte sus condiciones de venta sin gastos para el vendedor. Comparas las propuestas y decides cuál te interesa más.',
     },
     {
       question: '¿Qué ventajas tiene este modelo frente al tradicional?',
-      answer: 'La principal ventaja es la velocidad de venta. Al eliminar la comisión del comprador, tu piso es más atractivo: el comprador puede ofrecer un precio mayor (al ahorrarse la comisión) y tú vendes antes. Además, amplificas el número de compradores potenciales que ven tu propiedad como una mejor oportunidad.',
+      answer: 'La principal ventaja es el AHORRO directo de miles de euros. En lugar de pagar 3-5% del precio de venta (que en un piso de 300.000€ son 9.000-15.000€), vendes sin esos gastos. Además, recibes múltiples ofertas competitivas de agencias verificadas, no solo una propuesta de una sola inmobiliaria.',
     },
   ];
 
@@ -55,14 +55,14 @@ export default function Home() {
               <div>
                 <div className="mb-6 inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
                   <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">
-                    El Comprador No Paga Comisión - Venta Más Rápida
+                    Comparador de Inmobiliarias Sin Gastos para el Vendedor
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
-                  Vende <span className="font-bold">Sin Comisiones</span> para el Comprador
+                  Vende Tu Casa <span className="font-bold">Sin Pagar Comisión</span>
                 </h1>
                 <p className="text-lg md:text-xl mb-8 text-slate-400 font-light leading-relaxed">
-                  Vende tu casa <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">sin que el comprador pague comisión</span> en toda España. Más atractivo para compradores = Venta más rápida al mejor precio. Las mejores inmobiliarias eliminan la comisión del comprador.
+                  Comparamos las mejores inmobiliarias de España que <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">NO te cobran comisión como vendedor</span>. Ahorra miles de euros en gastos de venta y elige la mejor agencia para tu propiedad.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -91,32 +91,32 @@ export default function Home() {
               {/* Columna Derecha - Ventajas Exclusivas */}
               <div className="bg-amber-500/10 border-2 border-amber-500/30 rounded-lg p-8 backdrop-blur-sm">
                 <div className="text-center">
-                  <div className="text-5xl mb-4">🚀</div>
+                  <div className="text-5xl mb-4">💰</div>
                   <h2 className="text-4xl md:text-5xl font-bold mb-2 leading-tight">
-                    <span className="text-amber-400">Vende </span>
-                    <span className="text-white">Más Rápido</span>
+                    <span className="text-amber-400">Ahorra </span>
+                    <span className="text-white">Miles de €</span>
                   </h2>
                   <p className="text-2xl md:text-3xl font-bold mb-6">
                     <span className="text-white">Sin comisión </span>
-                    <span className="text-amber-400">para el comprador</span>
+                    <span className="text-amber-400">para el vendedor</span>
                   </p>
                   <div className="space-y-4 text-left">
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>0% comisión comprador</strong> - Más atractivo para compradores
+                        <strong>0% comisión vendedor</strong> - Ahorra entre 9.000€ y 15.000€
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>Venta más rápida</strong> - Elimina el principal freno del comprador
+                        <strong>Compara múltiples ofertas</strong> - Elige la mejor agencia sin compromiso
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-amber-400 text-2xl">✓</span>
                       <p className="text-slate-200 text-lg">
-                        <strong>Mejor precio final</strong> - Comprador paga más por no tener comisión
+                        <strong>Servicio profesional completo</strong> - Sin gastos de venta para ti
                       </p>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function Home() {
 
                   <div className="mt-6 pt-6 border-t border-amber-500/30">
                     <p className="text-sm text-slate-300 italic">
-                      &ldquo;A través de nuestra plataforma, las agencias ofrecen mejores condiciones para captar clientes cualificados&rdquo;
+                      &ldquo;Comparamos inmobiliarias que no cobran al vendedor para que ahorres miles de euros en comisiones&rdquo;
                     </p>
                   </div>
                 </div>
@@ -173,9 +173,9 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-slate-900">Mejores Condiciones</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-slate-900">Ahorro Garantizado</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Consigue las mejores comisiones del mercado. Las agencias compiten por tu propiedad, tú eliges la mejor oferta.
+                    Conectamos con inmobiliarias que NO cobran comisión al vendedor. Ahorra entre 9.000€ y 15.000€ en gastos de venta. Vende sin desembolso.
                   </p>
                 </div>
               </div>
@@ -199,9 +199,9 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-slate-900">Agencias Verificadas</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-slate-900">Compara y Decide</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Solo trabajamos con las mejores agencias de Centro de Madrid, verificadas y con excelentes valoraciones de clientes.
+                    Recibe múltiples ofertas de agencias verificadas en toda España. Compara condiciones, elige la mejor y vende sin gastos para ti.
                   </p>
                 </div>
               </div>
@@ -213,10 +213,10 @@ export default function Home() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-              Mejores Inmobiliarias en Centro de Madrid 2025
+              Mejores Inmobiliarias Sin Comisión Vendedor - España 2025
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Ranking actualizado de las 10 mejores agencias inmobiliarias en Centro de Madrid según valoraciones de clientes, experiencia y servicios
+              Comparador actualizado de las mejores agencias inmobiliarias que NO cobran comisión al vendedor en España. Ahorra miles de euros y vende sin gastos.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               {topAgencies.map((agency) => (

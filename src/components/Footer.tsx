@@ -20,9 +20,9 @@ export default function Footer() {
               Vender Sin Comisiones
             </h3>
             <p className="text-sm text-gray-400">
-              Vende tu casa sin que el comprador pague comisión. Las mejores
-              inmobiliarias de España eliminan la comisión del comprador para que
-              vendas más rápido y al mejor precio.
+              Comparamos las mejores inmobiliarias de España que NO cobran
+              comisión al vendedor. Ahorra miles de euros en gastos de venta
+              y vende tu casa sin desembolso.
             </p>
           </div>
 
@@ -186,7 +186,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 text-sm text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Vender Sin Comisiones. Todos los derechos reservados.</p>
           <p className="mt-2 text-xs">
-            Vende tu casa sin que el comprador pague comisión en toda España. Venta más rápida y al mejor precio.
+            Comparador de inmobiliarias sin gastos para el vendedor. Ahorra miles de euros en toda España.
           </p>
         </div>
       </div>
