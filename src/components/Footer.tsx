@@ -13,7 +13,7 @@ export default function Footer() {
 
   // Helper para construir URL de ciudad
   const buildCityURL = (city: City) => {
-    return `/${city.regionSlug}/${city.provinceSlug}/${city.slug}/vender-sin-comision-vendedor`;
+    return `/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`;
   };
 
   return (
