@@ -27,7 +27,7 @@ export function LeadFormModalProvider({ children }: { children: ReactNode }) {
         onClose={closeModal}
         title="Solicita Ofertas Personalizadas"
       >
-        <LeadFormCompact onSuccess={closeModal} />
+        <LeadFormCompact />
       </Modal>
     </LeadFormModalContext.Provider>
   );

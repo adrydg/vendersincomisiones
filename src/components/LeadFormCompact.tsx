@@ -4,11 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LeadForm as LeadFormType } from '@/types/agency';
 
-interface LeadFormCompactProps {
-  onSuccess?: () => void;
-}
-
-export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
+export default function LeadFormCompact() {
   const router = useRouter();
   const [formData, setFormData] = useState<LeadFormType>({
     name: '',
