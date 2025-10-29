@@ -2,7 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllCities, getCityBySlug } from '@/data/cities';
 import { getProvinceBySlug } from '@/data/provinces';
-import { getRegionBySlug } from '@/data/regions';
+import { getRegionBySlug, isUniprovincialRegion } from '@/data/regions';
+import CityLeadForm from '@/components/CityLeadForm';
+import FloatingCTA from '@/components/FloatingCTA';
 
 interface PageProps {
   params: Promise<{
@@ -15,11 +17,14 @@ interface PageProps {
 export async function generateStaticParams() {
   const cities = getAllCities();
 
-  return cities.map((city) => ({
-    region: city.regionSlug,
-    provincia: city.provinceSlug,
-    ciudad: city.slug,
-  }));
+  // Solo generar rutas para ciudades de comunidades multiprovinciales
+  return cities
+    .filter((city) => !isUniprovincialRegion(city.regionSlug))
+    .map((city) => ({
+      region: city.regionSlug,
+      provincia: city.provinceSlug,
+      ciudad: city.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -89,12 +94,12 @@ export default async function CityPage({ params }: PageProps) {
             <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               {region.name} → {province.name}
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
-              <span className="font-bold">Vender Sin Comisión Vendedor en {city.name}</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-gray-900">
+              Vender Sin Comisión Vendedor en {city.name}
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-slate-600 font-light leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 text-gray-800 font-medium leading-relaxed max-w-4xl mx-auto">
               Comparamos las mejores inmobiliarias de {city.name} que{' '}
-              <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-700 font-semibold">
+              <span className="inline-block bg-amber-500 px-3 py-1 rounded-md text-white font-bold shadow-md">
                 NO te cobran comisión como vendedor
               </span>
               . Ahorra entre 9.000€ y 15.000€ en gastos de venta.
@@ -111,7 +116,7 @@ export default async function CityPage({ params }: PageProps) {
             </Link>
             <Link
               href="/ciudades"
-              className="bg-white text-slate-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md border border-slate-200"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md border border-slate-300"
             >
               Ver Más Ciudades
             </Link>
@@ -121,15 +126,15 @@ export default async function CityPage({ params }: PageProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">{averageSavings}€</div>
-              <div className="text-slate-600">Ahorro Promedio</div>
+              <div className="text-gray-800 font-semibold">Ahorro Promedio</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">0€</div>
-              <div className="text-slate-600">Comisión Vendedor</div>
+              <div className="text-gray-800 font-semibold">Comisión Vendedor</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">100%</div>
-              <div className="text-slate-600">Gratis para Ti</div>
+              <div className="text-gray-800 font-semibold">Gratis para Ti</div>
             </div>
           </div>
         </div>
@@ -267,6 +272,13 @@ export default async function CityPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Lead Form */}
+      <section id="lead-form" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto max-w-4xl">
+          <CityLeadForm cityName={city.name} defaultPropertyType="vender" />
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 px-4 bg-gradient-to-br from-amber-500 to-amber-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
@@ -301,6 +313,9 @@ export default async function CityPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Floating CTA */}
+      <FloatingCTA targetId="lead-form" text="Recibir Ofertas Gratis" />
     </div>
   );
 }

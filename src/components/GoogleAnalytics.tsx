@@ -23,21 +23,25 @@ export default function GoogleAnalytics() {
       {/* Google Tag (gtag.js) - Script de carga */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
 
       {/* Google Analytics 4 y Google Ads - Configuración */}
-      <Script id="google-analytics-ads" strategy="afterInteractive">
+      <Script id="google-analytics-ads" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           // Google Ads Configuration
-          gtag('config', '${GOOGLE_ADS_ID}');
+          gtag('config', '${GOOGLE_ADS_ID}', {
+            page_path: window.location.pathname,
+          });
 
           // Google Analytics Configuration
-          gtag('config', '${GA_MEASUREMENT_ID}');
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname,
+          });
         `}
       </Script>
     </>
