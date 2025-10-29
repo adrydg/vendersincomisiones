@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function ConfirmacionContacto() {
   useEffect(() => {
-    // Track conversion event in Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
+      // Track conversion event in Google Analytics
       window.gtag('event', 'conversion', {
         event_category: 'Lead',
         event_label: 'Formulario Completado',
@@ -18,6 +18,13 @@ export default function ConfirmacionContacto() {
         page_title: 'Confirmación de Contacto',
         page_location: window.location.href,
         page_path: '/confirmacion_contacto',
+      });
+
+      // Google Ads Conversion Tracking - promoConversionOK
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-17610611430/dMlVCPf5lbYbEOa1ss1B',
+        value: 1.0,
+        currency: 'EUR',
       });
     }
   }, []);
