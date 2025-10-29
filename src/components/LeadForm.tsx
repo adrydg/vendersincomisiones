@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { LeadForm as LeadFormType } from '@/types/agency';
 
 export default function LeadForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState<LeadFormType>({
     name: '',
     email: '',
@@ -43,21 +45,9 @@ export default function LeadForm() {
       }
 
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        propertyType: undefined,
-        street: '',
-        city: '',
-        budget: '',
-        publishedInAgency: undefined,
-        message: '',
-        acceptedTerms: true,  // Mantener premarcado
-      });
 
-      // Scroll al mensaje de éxito
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Redirigir a la página de confirmación
+      router.push('/confirmacion_contacto');
     } catch (error) {
       setSubmitStatus('error');
       console.error('Error al enviar formulario:', error);
@@ -100,7 +90,7 @@ export default function LeadForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
               Nombre completo *
             </label>
             <input
@@ -110,13 +100,13 @@ export default function LeadForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Tu nombre"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
               Email *
             </label>
             <input
@@ -126,14 +116,14 @@ export default function LeadForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="tu@email.com"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
             Teléfono *
           </label>
           <input
@@ -143,13 +133,13 @@ export default function LeadForm() {
             required
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="+34 600 000 000"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-3">
+          <label className="block text-sm font-medium text-gray-900 mb-3">
             ¿Qué deseas hacer?
           </label>
           <div className="flex gap-3">
@@ -159,7 +149,7 @@ export default function LeadForm() {
               className={`flex-1 px-4 py-3 rounded-full font-semibold transition-all ${
                 formData.propertyType === 'comprar'
                   ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               Comprar
@@ -170,7 +160,7 @@ export default function LeadForm() {
               className={`flex-1 px-4 py-3 rounded-full font-semibold transition-all ${
                 formData.propertyType === 'vender'
                   ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               Vender
@@ -181,7 +171,7 @@ export default function LeadForm() {
               className={`flex-1 px-4 py-3 rounded-full font-semibold transition-all ${
                 formData.propertyType === 'alquilar'
                   ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               Alquilar
@@ -191,7 +181,7 @@ export default function LeadForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="street" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="street" className="block text-sm font-medium text-gray-900 mb-2">
               Calle y número
             </label>
             <input
@@ -200,13 +190,13 @@ export default function LeadForm() {
               name="street"
               value={formData.street}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Ej: Calle Mayor 15"
             />
           </div>
 
           <div>
-            <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="city" className="block text-sm font-medium text-gray-900 mb-2">
               Población
             </label>
             <input
@@ -215,14 +205,14 @@ export default function LeadForm() {
               name="city"
               value={formData.city}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Ej: Centro de Madrid"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-2">
             Importe compraventa deseado
           </label>
           <input
@@ -231,13 +221,13 @@ export default function LeadForm() {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="Ej: 200.000€"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-3">
+          <label className="block text-sm font-medium text-gray-900 mb-3">
             ¿Actualmente publicado en agencia o portales?
           </label>
           <div className="flex gap-3">
@@ -247,7 +237,7 @@ export default function LeadForm() {
               className={`flex-1 px-6 py-3 rounded-full font-semibold transition-all ${
                 formData.publishedInAgency === true
                   ? 'bg-amber-500 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               Sí
@@ -258,7 +248,7 @@ export default function LeadForm() {
               className={`flex-1 px-6 py-3 rounded-full font-semibold transition-all ${
                 formData.publishedInAgency === false
                   ? 'bg-amber-500 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               No
@@ -267,7 +257,7 @@ export default function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
             Información extra relevante
           </label>
           <textarea
@@ -276,7 +266,7 @@ export default function LeadForm() {
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="Cuéntanos más sobre lo que buscas..."
           />
         </div>
@@ -331,9 +321,9 @@ export default function LeadForm() {
           <div className="bg-white rounded-lg max-w-3xl max-h-[80vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Política de Privacidad</h2>
-              <button onClick={() => setShowPrivacyModal(false)} className="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+              <button onClick={() => setShowPrivacyModal(false)} className="text-gray-500 hover:text-gray-900 text-3xl">&times;</button>
             </div>
-            <div className="prose prose-sm max-w-none text-gray-700 space-y-4">
+            <div className="prose prose-sm max-w-none text-gray-900 space-y-4">
               <p><strong>Última actualización:</strong> Enero 2025</p>
 
               <h3 className="text-lg font-bold mt-6">1. Responsable del Tratamiento</h3>
@@ -401,9 +391,9 @@ export default function LeadForm() {
           <div className="bg-white rounded-lg max-w-3xl max-h-[80vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Términos y Condiciones</h2>
-              <button onClick={() => setShowTermsModal(false)} className="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+              <button onClick={() => setShowTermsModal(false)} className="text-gray-500 hover:text-gray-900 text-3xl">&times;</button>
             </div>
-            <div className="prose prose-sm max-w-none text-gray-700 space-y-4">
+            <div className="prose prose-sm max-w-none text-gray-900 space-y-4">
               <p><strong>Última actualización:</strong> Enero 2025</p>
 
               <h3 className="text-lg font-bold mt-6">1. Objeto del Servicio</h3>

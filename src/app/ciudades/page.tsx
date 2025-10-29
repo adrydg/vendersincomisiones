@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllRegions } from '@/data/regions';
-import { getAllCities } from '@/data/cities';
+import { getAllCities, buildCityURL } from '@/data/cities';
 
 export const metadata: Metadata = {
   title: 'Vender Sin Comisión Vendedor en toda España - Ciudades Disponibles',
@@ -46,7 +46,7 @@ export default function CiudadesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
               <span className="font-bold">Vender Sin Comisión Vendedor en toda España</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-slate-600 font-light leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 text-slate-800 font-light leading-relaxed max-w-4xl mx-auto">
               Comparamos las mejores inmobiliarias que{' '}
               <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-700 font-semibold">
                 NO te cobran comisión como vendedor
@@ -69,19 +69,19 @@ export default function CiudadesPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">19</div>
-              <div className="text-slate-600">Comunidades Autónomas</div>
+              <div className="text-slate-800">Comunidades Autónomas</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">52</div>
-              <div className="text-slate-600">Provincias</div>
+              <div className="text-slate-800">Provincias</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">100+</div>
-              <div className="text-slate-600">Ciudades</div>
+              <div className="text-slate-800">Ciudades</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
               <div className="text-3xl font-bold text-amber-600 mb-2">0€</div>
-              <div className="text-slate-600">Comisión Vendedor</div>
+              <div className="text-slate-800">Comisión Vendedor</div>
             </div>
           </div>
         </div>
@@ -96,15 +96,15 @@ export default function CiudadesPage() {
             {featuredCities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`}
+                href={buildCityURL(city)}
                 className="bg-slate-50 p-6 rounded-xl hover:bg-amber-50 transition-colors border border-slate-200 hover:border-amber-300 group"
               >
                 <h3 className="text-xl font-bold mb-2 text-amber-600 group-hover:text-amber-700">
                   {city.name}
                 </h3>
-                <p className="text-slate-600 text-sm mb-2">{city.province}</p>
+                <p className="text-slate-800 text-sm mb-2">{city.province}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-500">
+                  <span className="text-sm text-slate-900">
                     {city.population.toLocaleString('es-ES')} habitantes
                   </span>
                   <span className="text-amber-600 group-hover:text-amber-700 font-semibold text-sm">
@@ -136,14 +136,14 @@ export default function CiudadesPage() {
                   >
                     {region.name} →
                   </Link>
-                  <p className="text-slate-600 mb-6">{region.description}</p>
+                  <p className="text-slate-800 mb-6">{region.description}</p>
 
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                     {cities.map((city) => (
                       <Link
                         key={city.slug}
-                        href={`/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`}
-                        className="text-slate-700 hover:text-amber-600 hover:underline text-sm p-2 rounded hover:bg-amber-50 transition-colors"
+                        href={buildCityURL(city)}
+                        className="text-slate-900 hover:text-amber-600 hover:underline text-sm p-2 rounded hover:bg-amber-50 transition-colors"
                       >
                         {city.name}
                       </Link>
@@ -167,7 +167,7 @@ export default function CiudadesPage() {
             <div className="text-center p-6">
               <div className="text-5xl mb-4">💰</div>
               <h3 className="text-lg font-bold mb-2">Ahorra Miles de €</h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-800 text-sm">
                 Evita pagar entre 9.000€ y 15.000€ en comisiones de venta
               </p>
             </div>
@@ -175,7 +175,7 @@ export default function CiudadesPage() {
             <div className="text-center p-6">
               <div className="text-5xl mb-4">🏠</div>
               <h3 className="text-lg font-bold mb-2">Servicio Completo</h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-800 text-sm">
                 Fotografía, publicación y gestión incluida sin coste
               </p>
             </div>
@@ -183,7 +183,7 @@ export default function CiudadesPage() {
             <div className="text-center p-6">
               <div className="text-5xl mb-4">📊</div>
               <h3 className="text-lg font-bold mb-2">Múltiples Ofertas</h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-800 text-sm">
                 Compara agencias verificadas sin compromiso en tu ciudad
               </p>
             </div>
@@ -191,7 +191,7 @@ export default function CiudadesPage() {
             <div className="text-center p-6">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-lg font-bold mb-2">Rápido y Fácil</h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-800 text-sm">
                 Respuesta en menos de 24 horas en cualquier ciudad
               </p>
             </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { LeadForm as LeadFormType } from '@/types/agency';
 
 interface LeadFormCompactProps {
@@ -8,6 +9,7 @@ interface LeadFormCompactProps {
 }
 
 export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState<LeadFormType>({
     name: '',
     email: '',
@@ -46,9 +48,8 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
       }
 
       setSubmitStatus('success');
-      if (onSuccess) {
-        setTimeout(() => onSuccess(), 2000);
-      }
+      // Redirigir a la página de confirmación
+      router.push('/confirmacion_contacto');
     } catch (error) {
       setSubmitStatus('error');
       console.error('Error al enviar formulario:', error);
@@ -109,7 +110,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
         {/* Nombre y Email en una fila en desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
               Nombre *
             </label>
             <input
@@ -119,13 +120,13 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Tu nombre"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-1">
               Email *
             </label>
             <input
@@ -135,7 +136,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="tu@email.com"
             />
           </div>
@@ -143,7 +144,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
 
         {/* Teléfono */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-1">
             Teléfono *
           </label>
           <input
@@ -153,14 +154,14 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
             required
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="+34 600 000 000"
           />
         </div>
 
         {/* Tipo de operación */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             ¿Qué deseas? *
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -170,7 +171,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.propertyType === 'comprar'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700'
+                  : 'bg-gray-100 text-gray-900'
               }`}
             >
               Comprar
@@ -181,7 +182,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.propertyType === 'vender'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700'
+                  : 'bg-gray-100 text-gray-900'
               }`}
             >
               Vender
@@ -192,7 +193,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.propertyType === 'alquilar'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700'
+                  : 'bg-gray-100 text-gray-900'
               }`}
             >
               Alquilar
@@ -203,7 +204,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
         {/* Calle y Ciudad */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label htmlFor="street" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="street" className="block text-sm font-medium text-gray-900 mb-1">
               Calle
             </label>
             <input
@@ -212,13 +213,13 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               name="street"
               value={formData.street}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Calle Mayor 15"
             />
           </div>
 
           <div>
-            <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="city" className="block text-sm font-medium text-gray-900 mb-1">
               Ciudad
             </label>
             <input
@@ -227,7 +228,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               name="city"
               value={formData.city}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               placeholder="Centro de Madrid"
             />
           </div>
@@ -235,7 +236,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
 
         {/* Presupuesto */}
         <div>
-          <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-1">
             Presupuesto
           </label>
           <input
@@ -244,14 +245,14 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="200.000€"
           />
         </div>
 
         {/* Publicado en agencia */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
             ¿Ya publicado?
           </label>
           <div className="grid grid-cols-2 gap-2">
@@ -261,7 +262,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               className={`px-4 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.publishedInAgency === true
                   ? 'bg-amber-500 text-white'
-                  : 'bg-gray-100 text-gray-700'
+                  : 'bg-gray-100 text-gray-900'
               }`}
             >
               Sí
@@ -272,7 +273,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               className={`px-4 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.publishedInAgency === false
                   ? 'bg-amber-500 text-white'
-                  : 'bg-gray-100 text-gray-700'
+                  : 'bg-gray-100 text-gray-900'
               }`}
             >
               No
@@ -282,7 +283,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
 
         {/* Mensaje */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-1">
             Información extra (opcional)
           </label>
           <textarea
@@ -291,7 +292,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
             rows={2}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="Cuéntanos más..."
           />
         </div>
@@ -342,7 +343,7 @@ export default function LeadFormCompact({ onSuccess }: LeadFormCompactProps) {
               <h3 className="text-lg font-bold">Política de Privacidad</h3>
               <button onClick={() => setShowPrivacyModal(false)} className="text-2xl">&times;</button>
             </div>
-            <div className="text-sm text-gray-700 space-y-3">
+            <div className="text-sm text-gray-900 space-y-3">
               <p>Tus datos serán tratados por www.vendersincomisiones.es para gestionar tu solicitud y serán cedidos a un máximo de 3 agencias inmobiliarias colaboradoras.</p>
               <p><strong>Derechos:</strong> Acceso, rectificación, supresión, oposición, limitación y portabilidad.</p>
               <p>Para más información consulta nuestra política completa de privacidad.</p>
