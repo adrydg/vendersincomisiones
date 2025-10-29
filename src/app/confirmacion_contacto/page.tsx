@@ -26,6 +26,11 @@ export default function ConfirmacionContacto() {
         value: 1.0,
         currency: 'EUR',
       });
+
+      // Google Analytics - Qualify Lead Event
+      window.gtag('event', 'qualify_lead', {
+        // Event parameters can be added here if needed
+      });
     }
   }, []);
 
