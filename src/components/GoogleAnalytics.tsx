@@ -3,17 +3,17 @@
 import Script from 'next/script';
 
 /**
- * Componente de Google Analytics 4 para Centro de Madrid
+ * Componente de Google Analytics 4 para Vender Sin Comisiones
  *
  * Este componente carga Google Analytics de manera optimizada usando Next.js Script.
  * Se carga con strategy="afterInteractive" para no bloquear la carga inicial de la página.
  *
- * ID de medición: G-JEPSMH317B (Centro de Madrid)
+ * ID de medición: G-JWSD843DGC (Vender Sin Comisiones)
  *
  * Uso: Añadir en el layout principal (app/layout.tsx) para que se ejecute en todas las páginas.
  */
 export default function GoogleAnalytics() {
-  const GA_MEASUREMENT_ID = 'G-JEPSMH317B';
+  const GA_MEASUREMENT_ID = 'G-JWSD843DGC';
 
   return (
     <>
