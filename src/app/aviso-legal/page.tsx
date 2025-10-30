@@ -38,7 +38,7 @@ export default function AvisoLegalPage() {
                 <ul className="list-none mb-4 space-y-2">
                   <li><strong>Titular:</strong> Inmobiliarias Centro Madrid</li>
                   <li><strong>Domicilio:</strong> Madrid, España</li>
-                  <li><strong>Correo electrónico:</strong> contacto@vendersincomisiones.es</li>
+                  <li><strong>Teléfono:</strong> +34 663 61 61 47</li>
                   <li><strong>Sitio Web:</strong> <Link href="/" className="text-blue-600 hover:underline">www.vendersincomisiones.es</Link></li>
                 </ul>
               </section>
@@ -166,7 +166,7 @@ export default function AvisoLegalPage() {
                 <p className="mb-4">
                   Para cualquier consulta o comunicación relacionada con este Aviso Legal, puede contactarnos a través de:
                 </p>
-                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
+                <p className="mb-2"><strong>Teléfono:</strong> +34 663 61 61 47</p>
                 <p><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.vendersincomisiones.es/contacto</Link></p>
               </section>
 

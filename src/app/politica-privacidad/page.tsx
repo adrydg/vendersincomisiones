@@ -47,7 +47,7 @@ export default function PoliticaPrivacidadPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Contacto</h2>
                 <p className="mb-2"><strong>Denominación social:</strong> Inmobiliarias Centro Madrid</p>
                 <p className="mb-2"><strong>Dirección:</strong> Madrid, España</p>
-                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
+                <p className="mb-2"><strong>Teléfono:</strong> +34 663 61 61 47</p>
                 <p className="mb-2"><strong>Sitio Web:</strong> <Link href="/" className="text-blue-600 hover:underline">www.vendersincomisiones.es</Link></p>
               </section>
 
@@ -91,7 +91,7 @@ export default function PoliticaPrivacidadPage() {
                   En determinadas circunstancias y por motivos relacionados con su situación particular, los interesados podrán oponerse al tratamiento de sus datos. Inmobiliarias Centro Madrid dejará de tratar los datos, salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles reclamaciones.
                 </p>
                 <p className="mb-4">
-                  Podrá ejercitar materialmente sus derechos de la siguiente forma: contactando con Inmobiliarias Centro Madrid en contacto@vendersincomisiones.es
+                  Podrá ejercitar materialmente sus derechos de la siguiente forma: contactando con Inmobiliarias Centro Madrid en el teléfono +34 663 61 61 47 o a través del formulario de contacto en nuestra web.
                 </p>
                 <p className="mb-4">
                   Si ha otorgado su consentimiento para alguna finalidad concreta, tiene derecho a retirar el consentimiento otorgado en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.

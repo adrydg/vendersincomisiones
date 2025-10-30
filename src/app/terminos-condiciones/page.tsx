@@ -288,7 +288,7 @@ export default function TerminosCondicionesPage() {
                 <p className="mb-4">
                   Para cualquier pregunta, aclaración o sugerencia sobre estos Términos y Condiciones, puede contactarnos:
                 </p>
-                <p className="mb-2"><strong>Email:</strong> contacto@vendersincomisiones.es</p>
+                <p className="mb-2"><strong>Teléfono:</strong> +34 663 61 61 47</p>
                 <p className="mb-2"><strong>Formulario de contacto:</strong> <Link href="/contacto" className="text-blue-600 hover:underline">www.vendersincomisiones.es/contacto</Link></p>
               </section>
 
