@@ -27,20 +27,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = `Vender Sin Comisión Vendedor en ${region.name} - Ahorra hasta 15.000€`;
-  const description = `💰 Comparamos las mejores inmobiliarias de ${region.name} que NO te cobran comisión como vendedor. Ahorra entre 9.000€ y 15.000€ en gastos de venta. Cobertura en todas las provincias.`;
+  const title = `Inmobiliarias que NO Cobran Comisión al Vendedor en ${region.name} | Comparador`;
+  const description = `💰 Encuentra inmobiliarias que no cobran comisión al vendedor en ${region.name}. Vende tu casa sin comisiones y ahorra 9.000€-15.000€. Comparador gratuito de agencias sin gastos para el vendedor.`;
 
   return {
     title,
     description,
     keywords: [
-      `vender sin comisiones ${region.name}`,
-      `vender casa sin comisiones vendedor ${region.name}`,
-      `inmobiliarias ${region.name} sin gastos vendedor`,
-      `vender piso ${region.name} sin comisión`,
-      `agencias inmobiliarias ${region.name}`,
+      `inmobiliarias que no cobran comision al vendedor ${region.name}`,
+      `inmobiliarias sin comisiones al vendedor ${region.name}`,
+      `vender mi piso sin comision al vendedor ${region.name}`,
+      `vender casa sin comisiones en ${region.name}`,
+      `inmobiliarias sin comisiones al comprador ${region.name}`,
+      `vender piso sin comision ${region.name}`,
+      `agencias sin comisiones vendedor ${region.name}`,
+      `vender sin gastos vendedor ${region.name}`,
       `comparador inmobiliarias ${region.name}`,
-      `vender sin gastos`,
+      `inmobiliarias ${region.name} sin gastos vendedor`,
     ],
     openGraph: {
       title,

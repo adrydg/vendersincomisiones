@@ -1,14 +1,18 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'Vender Sin Comisiones - Comparador de Inmobiliarias Sin Gastos para el Vendedor',
-  description: '💰 Comparamos las mejores inmobiliarias de España que NO te cobran comisión como vendedor. Ahorra entre 9.000€ y 15.000€ en gastos de venta. ✅ Servicio gratuito ✅ Sin compromiso ✅ Compara ofertas',
+  name: 'Inmobiliarias que NO Cobran Comisión al Vendedor - Comparador Gratis',
+  description: '💰 Encuentra inmobiliarias que no cobran comisión al vendedor. Vende tu casa sin comisiones y ahorra entre 9.000€ y 15.000€. Comparador gratuito de agencias sin gastos para el vendedor en toda España.',
   url: 'https://www.vendersincomisiones.es',
   ogImage: '/og-image.jpg',
   keywords: [
-    // Keywords principales - Sin comisiones para el vendedor
-    'vender sin comisiones',
+    // Keywords principales - Prioridad alta
+    'inmobiliarias que no cobran comision al vendedor',
+    'inmobiliarias sin comisiones al vendedor',
+    'inmobiliarias sin comisiones al comprador',
+    'vender mi piso sin comision al vendedor',
     'vender casa sin comisiones vendedor',
+    'vender sin comisiones',
     'vender piso sin pagar comisión',
     'inmobiliaria sin comisión vendedor',
     'vender sin gastos',
@@ -147,8 +151,8 @@ export const baseMetadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     url: siteConfig.url,
-    title: 'Vender Sin Comisiones - Comparador de Inmobiliarias Sin Gastos Vendedor',
-    description: '💰 Comparamos las mejores inmobiliarias que NO te cobran comisión. Ahorra miles de euros. Vende tu casa sin gastos para ti en toda España.',
+    title: 'Inmobiliarias que NO Cobran Comisión al Vendedor | Comparador Gratis',
+    description: '💰 Encuentra inmobiliarias que no cobran comisión al vendedor. Vende tu piso sin comisiones y ahorra entre 9.000€ y 15.000€. Comparador gratuito en toda España.',
     siteName: 'Vender Sin Comisiones',
     images: [
       {
@@ -161,8 +165,8 @@ export const baseMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vender Sin Comisiones - Ahorra Miles € en Gastos de Venta',
-    description: '💰 Comparamos inmobiliarias que NO cobran al vendedor. Ahorra entre 9.000€ y 15.000€. ✅ Gratis ✅ Sin compromiso ✅ Compara ofertas',
+    title: 'Inmobiliarias Sin Comisión al Vendedor | Ahorra Miles €',
+    description: '💰 Encuentra inmobiliarias que no cobran comisión al vendedor. Vende tu piso sin comisiones. Ahorra 9.000€-15.000€. ✅ Gratis ✅ Sin compromiso',
     images: [siteConfig.ogImage],
     creator: '@vendersincomision',
   },
