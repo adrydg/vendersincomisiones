@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllRegions, getRegionBySlug } from '@/data/regions';
 import { getProvincesByRegion } from '@/data/provinces';
-import { getCitiesByRegion } from '@/data/cities';
+import { getCitiesByRegion, buildCityURL } from '@/data/cities';
 
 interface PageProps {
   params: Promise<{
@@ -159,7 +159,7 @@ export default async function RegionPage({ params }: PageProps) {
               {featuredCities.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`}
+                  href={buildCityURL(city)}
                   className="bg-white p-4 rounded-lg hover:bg-amber-50 transition-colors text-center border border-slate-200 hover:border-amber-300"
                 >
                   <div className="font-semibold text-amber-600">{city.name}</div>

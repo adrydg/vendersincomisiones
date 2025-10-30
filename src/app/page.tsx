@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AgencyCard from '@/components/AgencyCard';
 import { OpenLeadFormButton } from '@/components/LeadFormModal';
@@ -43,79 +42,76 @@ export default function Home() {
         }}
       />
 
-      <Navbar />
-
       <main>
         {/* Hero Section - Estilo Engel & Völkers con Ventajas Exclusivas */}
-        <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-24 md:py-32">
+        <section className="relative bg-gradient-to-br from-blue-50 via-white to-slate-50 py-24 md:py-32">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Columna Izquierda */}
               <div>
-                <div className="mb-6 inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
-                  <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">
+                <div className="mb-6 inline-block px-4 py-2 bg-blue-100 border border-blue-200 rounded-full">
+                  <span className="text-blue-700 text-sm font-semibold tracking-wide uppercase">
                     Comparador de Inmobiliarias Sin Gastos para el Vendedor
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 tracking-tight">
-                  <span className="font-bold">Vender Casa Sin Pagar Comisión al Vendedor es Posible</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-gray-900">
+                  Vender Casa Sin Pagar Comisión al Vendedor es Posible
                 </h1>
-                <p className="text-lg md:text-xl mb-8 text-slate-400 font-light leading-relaxed">
-                  Comparamos las mejores inmobiliarias de España que <span className="inline-block bg-amber-500/20 px-3 py-1 rounded-md text-amber-400 font-semibold">NO te cobran comisión como vendedor</span>. Ahorra entre 9.000€ y 15.000€ en gastos de venta. Compara ofertas y elige la mejor agencia sin desembolso.
+                <p className="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+                  Comparamos las mejores inmobiliarias de España que <span className="inline-block bg-blue-600 px-3 py-1 rounded-md text-white font-semibold shadow-sm">NO te cobran comisión como vendedor</span>. Ahorra entre 9.000€ y 15.000€ en gastos de venta. Compara ofertas y elige la mejor agencia sin desembolso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="/contacto"
-                    className="group bg-amber-500 text-slate-900 px-10 py-4 rounded-sm font-semibold text-lg hover:bg-amber-400 transition-all shadow-lg hover:shadow-xl hover:scale-105 duration-300"
+                  <OpenLeadFormButton
+                    className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-emerald-600 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 duration-300 cursor-pointer"
                   >
                     <span className="flex items-center justify-center gap-2">
                       Recibir Propuestas Gratis
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
-                  </Link>
+                  </OpenLeadFormButton>
                   <Link
                     href="/comparador"
-                    className="border-2 border-slate-400 text-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+                    className="border-2 border-blue-600 text-blue-700 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300"
                   >
                     Ver Ranking de Agencias
                   </Link>
                 </div>
-                <p className="mt-6 text-sm text-slate-500">
+                <p className="mt-6 text-sm text-gray-600">
                   ✓ Sin compromiso  &nbsp;•&nbsp;  ✓ 100% Gratuito  &nbsp;•&nbsp;  ✓ Respuesta en 24h
                 </p>
               </div>
 
               {/* Columna Derecha - Ventajas Exclusivas */}
-              <div className="bg-amber-500/10 border-2 border-amber-500/30 rounded-lg p-8 backdrop-blur-sm">
+              <div className="bg-white border-2 border-blue-200 rounded-xl p-8 shadow-lg">
                 <div className="text-center">
                   <div className="text-5xl mb-4">💰</div>
                   <h2 className="text-4xl md:text-5xl font-bold mb-2 leading-tight">
-                    <span className="text-amber-400">Ahorra hasta </span>
-                    <span className="text-white">15.000€</span>
+                    <span className="text-blue-700">Ahorra hasta </span>
+                    <span className="text-gray-900">15.000€</span>
                   </h2>
                   <p className="text-2xl md:text-3xl font-bold mb-6">
-                    <span className="text-white">0% comisión </span>
-                    <span className="text-amber-400">para el vendedor</span>
+                    <span className="text-gray-900">0% comisión </span>
+                    <span className="text-blue-700">para el vendedor</span>
                   </p>
                   <div className="space-y-4 text-left">
                     <div className="flex items-start gap-3">
-                      <span className="text-amber-400 text-2xl">✓</span>
-                      <p className="text-slate-200 text-lg">
+                      <span className="text-blue-600 text-2xl">✓</span>
+                      <p className="text-gray-700 text-lg">
                         <strong>0% comisión vendedor</strong> - Ahorra entre 9.000€ y 15.000€
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-amber-400 text-2xl">✓</span>
-                      <p className="text-slate-200 text-lg">
+                      <span className="text-blue-600 text-2xl">✓</span>
+                      <p className="text-gray-700 text-lg">
                         <strong>Compara múltiples ofertas</strong> - Elige la mejor agencia sin compromiso
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-amber-400 text-2xl">✓</span>
-                      <p className="text-slate-200 text-lg">
+                      <span className="text-blue-600 text-2xl">✓</span>
+                      <p className="text-gray-700 text-lg">
                         <strong>Servicio profesional completo</strong> - Sin gastos de venta para ti
                       </p>
                     </div>
@@ -123,15 +119,20 @@ export default function Home() {
 
                   {/* Pastilla destacada "Gratis y sin compromiso" */}
                   <div className="mt-6 flex justify-center">
-                    <div className="bg-gradient-to-r from-amber-500 to-amber-400 px-8 py-3 rounded-full shadow-lg">
-                      <span className="text-slate-900 font-bold text-lg tracking-wide">
+                    <OpenLeadFormButton
+                      className="group bg-gradient-to-r from-emerald-500 to-teal-600 px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 cursor-pointer"
+                    >
+                      <span className="text-white font-bold text-lg tracking-wide flex items-center gap-2">
                         ¡GRATIS Y SIN COMPROMISO!
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
                       </span>
-                    </div>
+                    </OpenLeadFormButton>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-amber-500/30">
-                    <p className="text-sm text-slate-300 italic">
+                  <div className="mt-6 pt-6 border-t border-blue-200">
+                    <p className="text-sm text-gray-600 italic">
                       &ldquo;Comparamos inmobiliarias que no cobran al vendedor para que ahorres miles de euros en comisiones&rdquo;
                     </p>
                   </div>
@@ -142,14 +143,14 @@ export default function Home() {
         </section>
 
         {/* CTA Flotante debajo del Hero */}
-        <section className="py-8 bg-gradient-to-r from-amber-500 to-amber-600">
+        <section className="py-8 bg-blue-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <OpenLeadFormButton className="group inline-flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-sm font-semibold text-lg hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl hover:scale-105 duration-300 cursor-pointer">
+            <OpenLeadFormButton className="group inline-flex items-center justify-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 duration-300 cursor-pointer">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Recibir Propuestas Mejoradas
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </OpenLeadFormButton>
@@ -163,13 +164,13 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-light text-slate-900 mb-4 tracking-tight">
                 Servicio <span className="font-bold">Premium</span> sin Coste
               </h2>
-              <div className="w-20 h-1 bg-amber-500 mx-auto"></div>
+              <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
             </div>
             <div className="grid md:grid-cols-3 gap-12">
               <div className="group hover:scale-105 transition-transform duration-300">
-                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-amber-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-blue-600 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-blue-600/10 rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -180,9 +181,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="group hover:scale-105 transition-transform duration-300">
-                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-amber-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-blue-600 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-blue-600/10 rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                   </div>
@@ -193,9 +194,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="group hover:scale-105 transition-transform duration-300">
-                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-amber-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-amber-500/10 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-slate-50 border border-slate-200 p-10 text-center hover:border-blue-600 hover:shadow-xl transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-blue-600/10 rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
@@ -553,28 +554,28 @@ export default function Home() {
         </section>
 
         {/* CTA Barrios - Solicitar Oferta Mejorada */}
-        <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-700">
+        <section className="py-12 bg-gradient-to-r from-emerald-500 via-teal-500 to-teal-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex flex-col items-center gap-6">
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
                   ¿Quieres vender en tu barrio?
                 </h3>
-                <p className="text-xl text-blue-100">
+                <p className="text-xl text-emerald-50">
                   Recibe ofertas mejoradas de las mejores inmobiliarias especializadas en tu zona
                 </p>
               </div>
-              <OpenLeadFormButton className="group inline-flex items-center justify-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-lg font-bold text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-blue-900/50 hover:scale-105 duration-300 cursor-pointer">
+              <OpenLeadFormButton className="group inline-flex items-center justify-center gap-3 bg-white text-emerald-700 px-10 py-5 rounded-lg font-bold text-xl hover:bg-emerald-50 transition-all shadow-2xl hover:shadow-emerald-900/30 hover:scale-105 duration-300 cursor-pointer">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 Solicitar Oferta Mejorada en mi Barrio
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </OpenLeadFormButton>
-              <p className="text-sm text-blue-200">
+              <p className="text-sm text-emerald-50">
                 ✓ Gratis y sin compromiso  •  ✓ Agencias verificadas  •  ✓ Respuesta en 24h
               </p>
             </div>
@@ -648,35 +649,34 @@ export default function Home() {
         </section>
 
         {/* CTA Final - Diseño Premium */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+        <section className="relative py-24 md:py-32 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="mb-6 inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
-              <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">
+            <div className="mb-6 inline-block px-4 py-2 bg-blue-100 border border-blue-200 rounded-full">
+              <span className="text-blue-700 text-sm font-semibold tracking-wide uppercase">
                 Servicio Gratuito y Sin Compromiso
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight">
-              ¿Listo para <span className="font-bold">Vender</span> tu Vivienda?
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-gray-900">
+              ¿Listo para Vender tu Vivienda?
             </h2>
-            <p className="text-xl md:text-2xl mb-4 text-slate-300 font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
               Recibe propuestas personalizadas de las mejores inmobiliarias de Centro de Madrid
             </p>
-            <p className="text-lg mb-12 text-slate-400 font-light max-w-2xl mx-auto">
+            <p className="text-lg mb-12 text-gray-600 max-w-2xl mx-auto">
               Valoración gratuita de tu vivienda • Mejores condiciones del mercado • Todo desde tu sofá
             </p>
-            <Link
-              href="/contacto"
-              className="group inline-block bg-amber-500 text-slate-900 px-12 py-5 rounded-sm font-semibold text-xl hover:bg-amber-400 transition-all shadow-2xl hover:shadow-amber-500/50 hover:scale-105 duration-300"
+            <OpenLeadFormButton
+              className="group inline-block bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-12 py-5 rounded-lg font-semibold text-xl hover:from-emerald-600 hover:to-teal-700 transition-all shadow-2xl hover:shadow-emerald-600/30 hover:scale-105 duration-300 cursor-pointer"
             >
               <span className="flex items-center gap-2">
                 Recibir Propuestas Ahora
-                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </Link>
-            <p className="mt-8 text-sm text-slate-500">
+            </OpenLeadFormButton>
+            <p className="mt-8 text-sm text-gray-600">
               Más de 500 propietarios satisfechos en Centro de Madrid
             </p>
           </div>

@@ -25,7 +25,7 @@ export function LeadFormModalProvider({ children }: { children: ReactNode }) {
       <Modal
         isOpen={isOpen}
         onClose={closeModal}
-        title="Solicita Ofertas Personalizadas"
+        title="Solicitar propuesta inmobiliaria personalizada"
       >
         <LeadFormCompact />
       </Modal>

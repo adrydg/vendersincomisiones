@@ -76,12 +76,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Páginas de ciudades
   const cities = getAllCities();
-  const cityPages = cities.map((city) => ({
-    url: `${baseUrl}/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }));
+  const cityPages = cities.map((city) => {
+    // Comunidades uniprovinciales
+    const uniprovincialRegions = ['madrid', 'asturias', 'cantabria', 'murcia', 'navarra', 'la-rioja', 'baleares', 'ceuta', 'melilla'];
+    const url = uniprovincialRegions.includes(city.regionSlug)
+      ? `${baseUrl}/${city.regionSlug}/vender-sin-comision-vendedor-en-${city.slug}`
+      : `${baseUrl}/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`;
+
+    return {
+      url,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    };
+  });
 
   // Páginas dinámicas de noticias/artículos
   const articlePages = articles.map((article) => ({

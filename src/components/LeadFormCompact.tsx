@@ -19,6 +19,8 @@ export default function LeadFormCompact() {
     acceptedTerms: true,
   });
 
+  const [urgency, setUrgency] = useState<'alta' | 'media' | 'baja' | undefined>(undefined);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
@@ -34,7 +36,10 @@ export default function LeadFormCompact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          urgency: urgency,
+        }),
       });
 
       const data = await response.json();
@@ -117,7 +122,6 @@ export default function LeadFormCompact() {
               value={formData.name}
               onChange={handleChange}
               className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-              placeholder="Tu nombre"
             />
           </div>
 
@@ -133,7 +137,6 @@ export default function LeadFormCompact() {
               value={formData.email}
               onChange={handleChange}
               className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-              placeholder="tu@email.com"
             />
           </div>
         </div>
@@ -151,7 +154,6 @@ export default function LeadFormCompact() {
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-            placeholder="+34 600 000 000"
           />
         </div>
 
@@ -210,7 +212,6 @@ export default function LeadFormCompact() {
               value={formData.street}
               onChange={handleChange}
               className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-              placeholder="Calle Mayor 15"
             />
           </div>
 
@@ -225,15 +226,14 @@ export default function LeadFormCompact() {
               value={formData.city}
               onChange={handleChange}
               className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-              placeholder="Centro de Madrid"
             />
           </div>
         </div>
 
-        {/* Presupuesto */}
+        {/* Valor aproximado vivienda */}
         <div>
           <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-1">
-            Presupuesto
+            Valor aproximado vivienda
           </label>
           <input
             type="text"
@@ -242,14 +242,13 @@ export default function LeadFormCompact() {
             value={formData.budget}
             onChange={handleChange}
             className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-            placeholder="200.000€"
           />
         </div>
 
         {/* Publicado en agencia */}
         <div>
           <label className="block text-sm font-medium text-gray-900 mb-2">
-            ¿Ya publicado?
+            ¿Inmueble publicado en portales o agencia?
           </label>
           <div className="grid grid-cols-2 gap-2">
             <button
@@ -257,7 +256,7 @@ export default function LeadFormCompact() {
               onClick={() => setFormData(prev => ({ ...prev, publishedInAgency: true }))}
               className={`px-4 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.publishedInAgency === true
-                  ? 'bg-amber-500 text-white'
+                  ? 'bg-emerald-600 text-white'
                   : 'bg-gray-100 text-gray-900'
               }`}
             >
@@ -268,7 +267,7 @@ export default function LeadFormCompact() {
               onClick={() => setFormData(prev => ({ ...prev, publishedInAgency: false }))}
               className={`px-4 py-2 text-sm rounded-lg font-semibold transition-all ${
                 formData.publishedInAgency === false
-                  ? 'bg-amber-500 text-white'
+                  ? 'bg-emerald-600 text-white'
                   : 'bg-gray-100 text-gray-900'
               }`}
             >
@@ -277,10 +276,52 @@ export default function LeadFormCompact() {
           </div>
         </div>
 
+        {/* Urgencia */}
+        <div>
+          <label className="block text-sm font-medium text-gray-900 mb-2">
+            Urgencia
+          </label>
+          <div className="grid grid-cols-3 gap-2">
+            <button
+              type="button"
+              onClick={() => setUrgency('alta')}
+              className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
+                urgency === 'alta'
+                  ? 'bg-red-500 text-white'
+                  : 'bg-gray-100 text-gray-900'
+              }`}
+            >
+              Alta
+            </button>
+            <button
+              type="button"
+              onClick={() => setUrgency('media')}
+              className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
+                urgency === 'media'
+                  ? 'bg-yellow-500 text-white'
+                  : 'bg-gray-100 text-gray-900'
+              }`}
+            >
+              Media
+            </button>
+            <button
+              type="button"
+              onClick={() => setUrgency('baja')}
+              className={`px-3 py-2 text-sm rounded-lg font-semibold transition-all ${
+                urgency === 'baja'
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-100 text-gray-900'
+              }`}
+            >
+              Baja
+            </button>
+          </div>
+        </div>
+
         {/* Mensaje */}
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-1">
-            Información extra (opcional)
+            Añadir información complementaria
           </label>
           <textarea
             id="message"
@@ -321,13 +362,13 @@ export default function LeadFormCompact() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold disabled:bg-gray-400"
+          className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-3 rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all font-semibold disabled:bg-gray-400 shadow-lg"
         >
-          {isSubmitting ? 'Enviando...' : 'Recibir Ofertas Gratis'}
+          {isSubmitting ? 'Enviando...' : 'Recibir propuesta sin compromiso'}
         </button>
 
         <p className="text-xs text-gray-500 text-center">
-          Recibirás hasta 3 ofertas en 24h
+          Te garantizamos la mejor propuesta de tu zona
         </p>
       </form>
 

@@ -5,6 +5,7 @@ import { getProvinceBySlug } from '@/data/provinces';
 import { getRegionBySlug, isUniprovincialRegion } from '@/data/regions';
 import CityLeadForm from '@/components/CityLeadForm';
 import FloatingCTA from '@/components/FloatingCTA';
+import { OpenLeadFormButton } from '@/components/LeadFormModal';
 
 interface PageProps {
   params: Promise<{
@@ -108,12 +109,16 @@ export default async function CityPage({ params }: PageProps) {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/comparador"
-              className="bg-amber-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+            <OpenLeadFormButton
+              className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-emerald-600 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
-              Comparar Inmobiliarias Gratis
-            </Link>
+              <span className="flex items-center justify-center gap-2">
+                Comparar Inmobiliarias Gratis
+                <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </OpenLeadFormButton>
             <Link
               href="/ciudades"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md border border-slate-300"
@@ -125,15 +130,15 @@ export default async function CityPage({ params }: PageProps) {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-3xl font-bold text-amber-600 mb-2">{averageSavings}€</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">{averageSavings}€</div>
               <div className="text-gray-800 font-semibold">Ahorro Promedio</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-3xl font-bold text-amber-600 mb-2">0€</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">0€</div>
               <div className="text-gray-800 font-semibold">Comisión Vendedor</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="text-3xl font-bold text-amber-600 mb-2">100%</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">100%</div>
               <div className="text-gray-800 font-semibold">Gratis para Ti</div>
             </div>
           </div>
@@ -196,7 +201,7 @@ export default async function CityPage({ params }: PageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-amber-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 1
               </div>
               <h3 className="text-xl font-bold mb-3">Solicita Comparación</h3>
@@ -206,7 +211,7 @@ export default async function CityPage({ params }: PageProps) {
             </div>
 
             <div className="text-center">
-              <div className="bg-amber-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 2
               </div>
               <h3 className="text-xl font-bold mb-3">Recibe Ofertas</h3>
@@ -216,7 +221,7 @@ export default async function CityPage({ params }: PageProps) {
             </div>
 
             <div className="text-center">
-              <div className="bg-amber-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 3
               </div>
               <h3 className="text-xl font-bold mb-3">Elige y Vende</h3>
@@ -280,20 +285,24 @@ export default async function CityPage({ params }: PageProps) {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-br from-amber-500 to-amber-600 text-white">
+      <section className="py-20 px-4 bg-gradient-to-br from-emerald-500 via-teal-500 to-teal-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             ¿Listo para Vender Sin Comisión en {city.name}?
           </h2>
-          <p className="text-xl mb-8 text-amber-50">
+          <p className="text-xl mb-8 text-emerald-50">
             Compara las mejores inmobiliarias que no cobran al vendedor y ahorra hasta 15.000€
           </p>
-          <Link
-            href="/comparador"
-            className="inline-block bg-white text-amber-600 px-10 py-5 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors shadow-xl transform hover:-translate-y-0.5 transition-all"
+          <OpenLeadFormButton
+            className="group inline-flex items-center gap-2 bg-white text-emerald-700 px-10 py-5 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 duration-300 cursor-pointer"
           >
-            Comparar Inmobiliarias Gratis
-          </Link>
+            <span className="flex items-center gap-2">
+              Comparar Inmobiliarias Gratis
+              <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
+          </OpenLeadFormButton>
         </div>
       </section>
 

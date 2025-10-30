@@ -168,3 +168,9 @@ export function getRegionBySlug(slug: string): Region | undefined {
 export function getAllRegions(): Region[] {
   return regionsData;
 }
+
+// Helper para identificar si una región es uniprovincial
+export function isUniprovincialRegion(regionSlug: string): boolean {
+  const region = getRegionBySlug(regionSlug);
+  return region ? region.provinces.length === 1 && region.provinces[0] === regionSlug : false;
+}

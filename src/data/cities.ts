@@ -159,6 +159,20 @@ export function getCitiesByProvince(provinceSlug: string): City[] {
   return allCities.filter(city => city.provinceSlug === provinceSlug);
 }
 
+// Helper para construir URL de ciudad (con o sin provincia según si es uniprovincial)
+export function buildCityURL(city: City): string {
+  // Comunidades uniprovinciales donde región y provincia tienen el mismo slug
+  const uniprovincialRegions = ['madrid', 'asturias', 'cantabria', 'murcia', 'navarra', 'la-rioja', 'baleares', 'ceuta', 'melilla'];
+
+  if (uniprovincialRegions.includes(city.regionSlug)) {
+    // Para comunidades uniprovinciales: /madrid/vender-sin-comision-vendedor-en-ciudad
+    return `/${city.regionSlug}/vender-sin-comision-vendedor-en-${city.slug}`;
+  } else {
+    // Para comunidades multiprovinciales: /region/provincia/vender-sin-comision-vendedor-en-ciudad
+    return `/${city.regionSlug}/${city.provinceSlug}/vender-sin-comision-vendedor-en-${city.slug}`;
+  }
+}
+
 export function getFeaturedCities(): City[] {
   return allCities.filter(city => city.featured);
 }
